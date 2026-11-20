@@ -1,0 +1,74 @@
+#pragma once
+#include "EuroScopePlugIn.h"
+#include "Constants.h"
+#include <string>
+#include <algorithm>
+#include <thread>
+#include <future>
+#include <map>
+#include "STCA.h"
+#include "nlohmann/json.hpp"
+
+#define MY_PLUGIN_NAME "CoVCL"
+#define MY_PLUGIN_VERSION "@appveyor_build"
+#define MY_PLUGIN_DEVELOPER "Pierre Ferran (CoFrance), adapted for VCLvACC"
+#define MY_PLUGIN_COPYRIGHT "GPL v3"
+
+using namespace EuroScopePlugIn;
+using namespace Gdiplus;
+using namespace std;
+
+class CoVCLPlugIn :
+    public CPlugIn
+{
+public:
+    CoVCLPlugIn();
+    ~CoVCLPlugIn();
+
+    //---OnRadarScreenCreated------------------------------------------
+
+    CRadarScreen* OnRadarScreenCreated(const char* sDisplayName, bool NeedRadarContent, bool GeoReferenced, bool CanBeSaved, bool CanBeCreated);
+
+    //---OnCompileCommand-----------------------------------------------
+
+    bool OnCompileCommand(const char* sCommandLine);
+
+    void OnGetTagItem(CFlightPlan FlightPlan, CRadarTarget RadarTarget, int ItemCode, int TagData, char sItemString[16], int* pColorCode, COLORREF* pRGB, double* pFontSize);
+
+    void OnTimer(int Counter);
+
+    void OnFunctionCall(int FunctionId, const char* sItemString, POINT Pt, RECT Area);
+
+    toml::value CoVCLConfig;
+
+    string DetailedAircraft;
+    string DllPath;
+    map<string, string> ConflictGroups;
+    bool CanLoadRadarScreen = true;
+    bool Blink = false;
+    bool Debug = false;
+
+    CSTCA *Stca = nullptr;
+
+    void LoadConfigFile(bool fromWeb = true);
+
+    string LoadOCLData();
+
+    GdiplusStartupInput gdiplusStartupInput;
+    ULONG_PTR gdiplusToken;
+
+    std::future<string> RawOCLData;
+    nlohmann::json OCLData;
+
+    bool performanceMode = false;
+
+    void Log(string s)
+    {
+        std::ofstream file;
+        file.open("CoVCL_custom.log", std::ofstream::out | std::ofstream::app);
+        file << s << endl;
+        file.close();
+    }
+
+};
+

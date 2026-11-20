@@ -1,0 +1,4966 @@
+[colours]
+sector_vertical_limits = [140, 65, 65, 65]
+ac_not_concerned = [142, 142, 142]
+ac_notified = [84, 179, 108]
+ac_assumed = [209, 209, 209]
+ac_transferred = [169, 202, 119]
+ac_redundant = [124, 209, 237]
+conflict_group_moon = [75, 221, 75]
+conflict_group_losange = [255, 174, 23]
+conflict_group_star = [255, 255, 127]
+sep_tool= [255, 176, 176]
+sep_warning=[255, 255, 0]
+stca_warning=[255, 0, 0]
+sep_background=[40, 40, 40]
+sep_border=[0, 0, 0]
+intention_code_vfr=[255, 121, 0]
+intention_code_arrival=[237, 168, 255]
+intention_code_departure=[114, 216, 250]
+ocl_tooltip=[255, 246, 216]
+
+[ac_symbols]
+size = 5
+number_of_trails = 8
+
+[sep]
+warning_threshold = 9
+lookup_time = 30
+
+[menu]
+menu_position = 490
+
+[stca]
+high_level_sep = 5
+low_level_sep = 3
+disable_level = 3500
+level_reduced_sep = 14500
+time_to_extrapolate = 100
+altitude_sep = 900
+altitude_coarse_filter = 15000
+distance_coarse_filter = 70
+
+# Arrival runway colours for the Approach Intention Code tag item (was the LFPG south-runway rule in CoFrance).
+# A flight to `airport` whose assigned arrival runway starts with one of `runways` gets `colour`.
+# Other arrivals keep colours.intention_code_arrival. Edit the runway lists to match how VCL splits traffic.
+[[arrival_runway_colour]]
+airport = "VVTS"
+runways = ["07L", "25R"]
+colour = [255, 176, 176]
+
+[[arrival_runway_colour]]
+airport = "VVNB"
+runways = ["11L", "29R"]
+colour = [255, 176, 176]
+
+# ===== GENERATED SECTOR LABELS (tools/generate_sector_labels.py) =====
+# Source: VVXX-Mekong-Radar_20261101024641-261101-0003.ese
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLLB CTR as VLLB_APP"
+text = "075\r\nSFC"
+position = ["N019.54.41.567", "E102.10.18.714"]
+size = 20
+controller_me = "LBA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDSR_F_APP as VDSR_APP"
+text = "065\r\n030"
+position = ["N013.17.36.682", "E103.39.58.174"]
+size = 20
+controller_me = "SRA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDSR_F_APP as VDSA_APP"
+text = "065\r\n030"
+position = ["N013.17.36.682", "E103.39.58.174"]
+size = 20
+controller_me = "SAA"
+controller_others = []
+controller_not_others = ["SRA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDSR_F_APP_L as VDSR_APP"
+text = "030\r\nSFC"
+position = ["N013.17.01.961", "E103.39.52.248"]
+size = 20
+controller_me = "SRA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDSR_F_APP_L as VDSA_APP"
+text = "030\r\nSFC"
+position = ["N013.17.01.961", "E103.39.52.248"]
+size = 20
+controller_me = "SAA"
+controller_others = []
+controller_not_others = ["SRA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVLT_F_05_1 as VVLT_F_APP"
+text = "055\r\n015"
+position = ["N010.35.25.135", "E107.02.26.557"]
+size = 20
+controller_me = "LTA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVLT_F_05_1 as VVTS_APP"
+text = "055\r\n015"
+position = ["N010.35.25.135", "E107.02.26.557"]
+size = 20
+controller_me = "TSTE"
+controller_others = []
+controller_not_others = ["LTA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVLT_F_05_2 as VVLT_F_APP"
+text = "055\r\n015"
+position = ["N010.44.15.750", "E106.54.59.750"]
+size = 20
+controller_me = "LTA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVLT_F_05_2 as VVTS_APP"
+text = "055\r\n015"
+position = ["N010.44.15.750", "E106.54.59.750"]
+size = 20
+controller_me = "TSTE"
+controller_others = []
+controller_not_others = ["LTA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVLT_F_05_3 as VVLT_F_APP"
+text = "055\r\n025"
+position = ["N010.47.04.000", "E107.02.27.500"]
+size = 20
+controller_me = "LTA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVLT_F_05_3 as VVTS_APP"
+text = "055\r\n025"
+position = ["N010.47.04.000", "E107.02.27.500"]
+size = 20
+controller_me = "TSTE"
+controller_others = []
+controller_not_others = ["LTA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVLT_F_23 as VVLT_F_APP"
+text = "035\r\n025"
+position = ["N010.44.24.814", "E107.09.44.723"]
+size = 20
+controller_me = "LTA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVLT_F_23 as VVTS_APP"
+text = "035\r\n025"
+position = ["N010.44.24.814", "E107.09.44.723"]
+size = 20
+controller_me = "TSTE"
+controller_others = []
+controller_not_others = ["LTA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVLT_F_23_3 as VVLT_F_APP"
+text = "065\r\n035"
+position = ["N010.31.49.401", "E107.14.12.988"]
+size = 20
+controller_me = "LTA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVLT_F_23_3 as VVTS_APP"
+text = "065\r\n035"
+position = ["N010.31.49.401", "E107.14.12.988"]
+size = 20
+controller_me = "TSTE"
+controller_others = []
+controller_not_others = ["LTA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVLT_F_23_L1 as VVLT_F_APP"
+text = "025\r\nSFC"
+position = ["N010.38.58.630", "E107.07.20.395"]
+size = 20
+controller_me = "LTA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVLT_F_23_L1 as VVTS_APP"
+text = "025\r\nSFC"
+position = ["N010.38.58.630", "E107.07.20.395"]
+size = 20
+controller_me = "TSTE"
+controller_others = []
+controller_not_others = ["LTA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVLT_F_23_L2 as VVLT_F_APP"
+text = "025\r\nSFC"
+position = ["N010.53.05.517", "E107.06.28.223"]
+size = 20
+controller_me = "LTA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVLT_F_23_L2 as VVTS_APP"
+text = "025\r\nSFC"
+position = ["N010.53.05.517", "E107.06.28.223"]
+size = 20
+controller_me = "TSTE"
+controller_others = []
+controller_not_others = ["LTA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_F 07_1 as VVTS_F_APP"
+text = "085\r\n055"
+position = ["N010.31.14.216", "E106.19.51.744"]
+size = 20
+controller_me = "TSA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_F 07_1 as VVTS_APP"
+text = "085\r\n055"
+position = ["N010.31.14.216", "E106.19.51.744"]
+size = 20
+controller_me = "TSTE"
+controller_others = []
+controller_not_others = ["TSA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_F 07_2 as VVTS_F_APP"
+text = "055\r\n025"
+position = ["N010.34.21.943", "E106.24.16.133"]
+size = 20
+controller_me = "TSA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_F 07_2 as VVTS_APP"
+text = "055\r\n025"
+position = ["N010.34.21.943", "E106.24.16.133"]
+size = 20
+controller_me = "TSTE"
+controller_others = []
+controller_not_others = ["TSA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_F 07_3 as VVTS_F_APP"
+text = "125\r\n085"
+position = ["N010.24.25.120", "E106.28.51.784"]
+size = 20
+controller_me = "TSA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_F 07_3 as VVTS_APP"
+text = "125\r\n085"
+position = ["N010.24.25.120", "E106.28.51.784"]
+size = 20
+controller_me = "TSTE"
+controller_others = []
+controller_not_others = ["TSA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_F 07_4 as VVTS_F_APP"
+text = "025\r\nSFC"
+position = ["N010.33.49.302", "E106.23.42.415"]
+size = 20
+controller_me = "TSA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_F 07_4 as VVTS_APP"
+text = "025\r\nSFC"
+position = ["N010.33.49.302", "E106.23.42.415"]
+size = 20
+controller_me = "TSTE"
+controller_others = []
+controller_not_others = ["TSA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_F 25_1 as VVTS_F_APP"
+text = "055\r\n025"
+position = ["N010.50.11.190", "E106.46.26.816"]
+size = 20
+controller_me = "TSA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_F 25_1 as VVTS_APP"
+text = "055\r\n025"
+position = ["N010.50.11.190", "E106.46.26.816"]
+size = 20
+controller_me = "TSTE"
+controller_others = []
+controller_not_others = ["TSA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_F 25_1 L as VVTS_F_APP"
+text = "025\r\nSFC"
+position = ["N010.50.30.529", "E106.48.26.058"]
+size = 20
+controller_me = "TSA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_F 25_1 L as VVTS_APP"
+text = "025\r\nSFC"
+position = ["N010.50.30.529", "E106.48.26.058"]
+size = 20
+controller_me = "TSTE"
+controller_others = []
+controller_not_others = ["TSA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_F 25_2 as VVTS_F_APP"
+text = "095\r\n065"
+position = ["N010.54.33.735", "E107.06.16.673"]
+size = 20
+controller_me = "TSA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_F 25_2 as VVTS_APP"
+text = "095\r\n065"
+position = ["N010.54.33.735", "E107.06.16.673"]
+size = 20
+controller_me = "TSTE"
+controller_others = []
+controller_not_others = ["TSA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_F 25_2_L as VVTS_F_APP"
+text = "065\r\nSFC"
+position = ["N011.08.05.965", "E107.02.32.437"]
+size = 20
+controller_me = "TSA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_F 25_2_L as VVTS_APP"
+text = "065\r\nSFC"
+position = ["N011.08.05.965", "E107.02.32.437"]
+size = 20
+controller_me = "TSTE"
+controller_others = []
+controller_not_others = ["TSA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_F 25_3 as VVTS_F_APP"
+text = "115\r\n095"
+position = ["N010.58.31.589", "E107.15.35.112"]
+size = 20
+controller_me = "TSA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_F 25_3 as VVTS_APP"
+text = "115\r\n095"
+position = ["N010.58.31.589", "E107.15.35.112"]
+size = 20
+controller_me = "TSTE"
+controller_others = []
+controller_not_others = ["TSA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_F 25_4 as VVTS_F_APP"
+text = "065\r\n035"
+position = ["N010.48.44.429", "E107.07.42.647"]
+size = 20
+controller_me = "TSA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_F 25_4 as VVTS_APP"
+text = "065\r\n035"
+position = ["N010.48.44.429", "E107.07.42.647"]
+size = 20
+controller_me = "TSTE"
+controller_others = []
+controller_not_others = ["TSA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VVNB_F 11 as VVNB_F_APP"
+text = "075\r\nSFC"
+position = ["N021.16.39.596", "E105.32.52.356"]
+size = 20
+controller_me = "NBA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VVNB_F 11 as VVNB_APP"
+text = "075\r\nSFC"
+position = ["N021.16.39.596", "E105.32.52.356"]
+size = 20
+controller_me = "NBTE"
+controller_others = []
+controller_not_others = ["NBA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VVNB_F 11 L as VVNB_F_APP"
+text = "070\r\nSFC"
+position = ["N021.15.55.432", "E105.27.09.875"]
+size = 20
+controller_me = "NBA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VVNB_F 11 L as VVNB_APP"
+text = "070\r\nSFC"
+position = ["N021.15.55.432", "E105.27.09.875"]
+size = 20
+controller_me = "NBTE"
+controller_others = []
+controller_not_others = ["NBA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VVNB_F 29 as VVNB_F_APP"
+text = "075\r\nSFC"
+position = ["N021.00.48.447", "E106.18.53.765"]
+size = 20
+controller_me = "NBA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VVNB_F 29 as VVNB_APP"
+text = "075\r\nSFC"
+position = ["N021.00.48.447", "E106.18.53.765"]
+size = 20
+controller_me = "NBTE"
+controller_others = []
+controller_not_others = ["NBA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VVNB_F 29 L as VVNB_F_APP"
+text = "070\r\nSFC"
+position = ["N021.07.15.253", "E106.04.18.664"]
+size = 20
+controller_me = "NBA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VVNB_F 29 L as VVNB_APP"
+text = "070\r\nSFC"
+position = ["N021.07.15.253", "E106.04.18.664"]
+size = 20
+controller_me = "NBTE"
+controller_others = []
+controller_not_others = ["NBA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VVNB_F 29 L1 as VVNB_F_APP"
+text = "070\r\nSFC"
+position = ["N021.13.30.392", "E105.46.02.338"]
+size = 20
+controller_me = "NBA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VVNB_F 29 L1 as VVNB_APP"
+text = "070\r\nSFC"
+position = ["N021.13.30.392", "E105.46.02.338"]
+size = 20
+controller_me = "NBTE"
+controller_others = []
+controller_not_others = ["NBA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VVNB_F 29 L2 as VVNB_F_APP"
+text = "070\r\n050"
+position = ["N020.55.29.892", "E106.28.41.072"]
+size = 20
+controller_me = "NBA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VVNB_F 29 L2 as VVNB_APP"
+text = "070\r\n050"
+position = ["N020.55.29.892", "E106.28.41.072"]
+size = 20
+controller_me = "NBTE"
+controller_others = []
+controller_not_others = ["NBA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDSA_APP as VDSA_APP"
+text = "100\r\n065"
+position = ["N013.23.04.599", "E103.53.55.459"]
+size = 20
+controller_me = "SAA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDSA_APP_L1 as VDSA_APP"
+text = "065\r\nSFC"
+position = ["N013.34.08.077", "E103.54.20.225"]
+size = 20
+controller_me = "SAA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDSA_APP_L2 as VDSA_APP"
+text = "065\r\nSFC"
+position = ["N013.10.33.272", "E103.56.29.326"]
+size = 20
+controller_me = "SAA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDSA_APP_L3 as VDSA_APP"
+text = "065\r\n030"
+position = ["N013.26.58.708", "E103.51.12.970"]
+size = 20
+controller_me = "SAA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDSA_APP_L4 as VDSA_APP"
+text = "065\r\n030"
+position = ["N013.22.11.029", "E104.13.23.173"]
+size = 20
+controller_me = "SAA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDSV_APP as VDSV_APP"
+text = "150\r\n030"
+position = ["N010.48.08.059", "E103.23.54.883"]
+size = 20
+controller_me = "SVA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDSV_APP_L1 as VDSV_APP"
+text = "030\r\nSFC"
+position = ["N010.47.49.164", "E103.47.02.123"]
+size = 20
+controller_me = "SVA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDSV_APP_L2 as VDSV_APP"
+text = "030\r\nSFC"
+position = ["N010.34.17.025", "E103.21.57.121"]
+size = 20
+controller_me = "SVA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDTI_APP as VDTI_APP"
+text = "150\r\n030"
+position = ["N011.22.32.770", "E104.57.51.321"]
+size = 20
+controller_me = "KTA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDTI_APP_L1 as VDTI_APP"
+text = "030\r\nSFC"
+position = ["N011.29.27.055", "E105.13.20.400"]
+size = 20
+controller_me = "KTA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDTI_APP_L2 as VDTI_APP"
+text = "030\r\nSFC"
+position = ["N011.16.13.828", "E104.41.19.027"]
+size = 20
+controller_me = "KTA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLLB TMA as VLLB_APP"
+text = "195\r\n075"
+position = ["N019.52.40.501", "E102.11.15.203"]
+size = 20
+controller_me = "LBA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLLB TMA_L1 as VLLB_APP"
+text = "075\r\nSFC"
+position = ["N019.40.54.243", "E102.12.42.912"]
+size = 20
+controller_me = "LBA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLLB TMA_L2 as VLLB_APP"
+text = "075\r\nSFC"
+position = ["N020.08.01.415", "E102.08.44.578"]
+size = 20
+controller_me = "LBA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLPS TMA as VLPS_APP"
+text = "195\r\n075"
+position = ["N015.16.40.440", "E105.52.23.570"]
+size = 20
+controller_me = "PSA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLPS TMA_L as VLPS_APP"
+text = "075\r\nSFC"
+position = ["N015.14.19.417", "E105.49.06.882"]
+size = 20
+controller_me = "PSA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLSK TMA as VLSK_APP"
+text = "195\r\n040"
+position = ["N016.33.50.464", "E105.09.10.354"]
+size = 20
+controller_me = "SKA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLSK TMA as VLPS_APP"
+text = "195\r\n040"
+position = ["N016.33.50.464", "E105.09.10.354"]
+size = 20
+controller_me = "PSA"
+controller_others = []
+controller_not_others = ["SKA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLSK TMA_L as VLSK_APP"
+text = "040\r\nSFC"
+position = ["N016.34.37.896", "E105.03.53.664"]
+size = 20
+controller_me = "SKA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLSK TMA_L as VLPS_APP"
+text = "040\r\nSFC"
+position = ["N016.34.37.896", "E105.03.53.664"]
+size = 20
+controller_me = "PSA"
+controller_others = []
+controller_not_others = ["SKA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT_APP as VLVT_APP"
+text = "195\r\n040"
+position = ["N018.24.19.263", "E102.34.28.642"]
+size = 20
+controller_me = "VLA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT_APP L1 as VLVT_APP"
+text = "040\r\nSFC"
+position = ["N018.19.19.215", "E102.34.47.377"]
+size = 20
+controller_me = "VLA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS DNA_APP as DNA_APP"
+text = "245\r\n195"
+position = ["N015.14.49.940", "E107.55.54.604"]
+size = 20
+controller_me = "DNA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS DNA_L1_APP as DNA_APP"
+text = "100\r\nSFC"
+position = ["N014.52.40.694", "E108.33.32.915"]
+size = 20
+controller_me = "DNA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS DNA_L2_APP as DNA_APP"
+text = "195\r\nSFC"
+position = ["N015.16.55.845", "E107.39.32.640"]
+size = 20
+controller_me = "DNA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS DNA_L3_APP as DNA_APP"
+text = "195\r\n100"
+position = ["N014.52.40.694", "E108.33.32.915"]
+size = 20
+controller_me = "DNA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS DNA_L4_APP as DNA_APP"
+text = "195\r\n100"
+position = ["N013.58.16.147", "E109.03.21.970"]
+size = 20
+controller_me = "DNA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS DNA_L5_APP as DNA_APP"
+text = "195\r\n070"
+position = ["N015.24.46.022", "E108.41.45.317"]
+size = 20
+controller_me = "DNA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS DNA_L6_APP as DNA_APP"
+text = "195\r\n070"
+position = ["N016.26.41.651", "E107.38.26.073"]
+size = 20
+controller_me = "DNA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS DNA_L7_APP as DNA_APP"
+text = "195\r\n100"
+position = ["N014.00.32.025", "E107.58.51.731"]
+size = 20
+controller_me = "DNA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS DNA_L8_APP as DNA_APP"
+text = "195\r\n090"
+position = ["N017.00.07.957", "E106.35.41.032"]
+size = 20
+controller_me = "DNA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVCR TMA as VVCR_APP"
+text = "155\r\n025"
+position = ["N012.06.34.515", "E109.17.22.527"]
+size = 20
+controller_me = "CRA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVCR_L1_TMA as VVCR_APP"
+text = "025\r\nSFC"
+position = ["N012.01.33.594", "E109.01.06.106"]
+size = 20
+controller_me = "CRA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVCR_L2_TMA as VVCR_APP"
+text = "025\r\nSFC"
+position = ["N012.06.04.500", "E109.29.45.058"]
+size = 20
+controller_me = "CRA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVDN_APP as VVDN_APP"
+text = "195\r\n070"
+position = ["N016.03.25.816", "E108.10.33.799"]
+size = 20
+controller_me = "DTA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVDN_APP as DNA_APP"
+text = "195\r\n070"
+position = ["N016.03.25.816", "E108.10.33.799"]
+size = 20
+controller_me = "DNA"
+controller_others = []
+controller_not_others = ["DTA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVDN_L_APP as VVDN_APP"
+text = "070\r\nSFC"
+position = ["N016.05.41.758", "E107.58.55.303"]
+size = 20
+controller_me = "DTA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVDN_L_APP as DNA_APP"
+text = "070\r\nSFC"
+position = ["N016.05.41.758", "E107.58.55.303"]
+size = 20
+controller_me = "DNA"
+controller_others = []
+controller_not_others = ["DTA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVDN_L2_APP as VVDN_APP"
+text = "070\r\nSFC"
+position = ["N016.02.36.374", "E108.23.33.273"]
+size = 20
+controller_me = "DTA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVDN_L2_APP as DNA_APP"
+text = "070\r\nSFC"
+position = ["N016.02.36.374", "E108.23.33.273"]
+size = 20
+controller_me = "DNA"
+controller_others = []
+controller_not_others = ["DTA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVDN_L3_APP as VVDN_APP"
+text = "070\r\n030"
+position = ["N016.03.09.924", "E108.11.53.599"]
+size = 20
+controller_me = "DTA"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVDN_L3_APP as DNA_APP"
+text = "070\r\n030"
+position = ["N016.03.09.924", "E108.11.53.599"]
+size = 20
+controller_me = "DNA"
+controller_others = []
+controller_not_others = ["DTA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_APP 07_1 as VVTS_APP"
+text = "125\r\nSFC"
+position = ["N011.02.01.605", "E106.39.26.423"]
+size = 20
+controller_me = "TSTE"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_APP 07_2 as VVTS_APP"
+text = "125\r\n085"
+position = ["N010.41.19.927", "E106.06.48.411"]
+size = 20
+controller_me = "TSTE"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_APP 07_3 as VVTS_APP"
+text = "125\r\n055"
+position = ["N010.37.31.793", "E106.54.43.859"]
+size = 20
+controller_me = "TSTE"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_APP 07_4 as VVTS_APP"
+text = "125\r\n025"
+position = ["N010.49.40.678", "E106.39.55.053"]
+size = 20
+controller_me = "TSTE"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_APP 25_1 as VVTS_APP"
+text = "125\r\n095"
+position = ["N010.51.39.542", "E106.38.36.139"]
+size = 20
+controller_me = "TSTE"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_APP 25_2 as VVTS_APP"
+text = "125\r\n115"
+position = ["N010.58.31.589", "E107.15.35.112"]
+size = 20
+controller_me = "TSTE"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S10 as VVHM_7_CTR"
+text = "195\r\nSFC"
+position = ["N010.29.07.232", "E106.17.16.591"]
+size = 30
+controller_me = "VHS7"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S10 as VVHM_3_CTR"
+text = "195\r\nSFC"
+position = ["N010.29.07.232", "E106.17.16.591"]
+size = 30
+controller_me = "VHS3"
+controller_others = []
+controller_not_others = ["VHS7"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S10 as VVHM_B_CTR"
+text = "195\r\nSFC"
+position = ["N010.29.07.232", "E106.17.16.591"]
+size = 30
+controller_me = "HCMB"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S10 as VVHM_CTR"
+text = "195\r\nSFC"
+position = ["N010.29.07.232", "E106.17.16.591"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3", "HCMB"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S10 as VCL_CTR"
+text = "195\r\nSFC"
+position = ["N010.29.07.232", "E106.17.16.591"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3", "HCMB", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S10 as VVTS_APP"
+text = "165\r\nSFC"
+position = ["N010.23.02.171", "E106.19.00.336"]
+size = 20
+controller_me = "TSTE"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3", "HCMB", "VVHM", "VCL"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S10_1 as VVHM_7_CTR"
+text = "165\r\nSFC"
+position = ["N011.12.01.575", "E106.01.11.957"]
+size = 30
+controller_me = "VHS7"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S10_1 as VVHM_3_CTR"
+text = "165\r\nSFC"
+position = ["N011.12.01.575", "E106.01.11.957"]
+size = 30
+controller_me = "VHS3"
+controller_others = []
+controller_not_others = ["VHS7"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S10_1 as VVHM_B_CTR"
+text = "165\r\nSFC"
+position = ["N011.12.01.575", "E106.01.11.957"]
+size = 30
+controller_me = "HCMB"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S10_1 as VVHM_CTR"
+text = "165\r\nSFC"
+position = ["N011.12.01.575", "E106.01.11.957"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3", "HCMB"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S10_1 as VCL_CTR"
+text = "165\r\nSFC"
+position = ["N011.12.01.575", "E106.01.11.957"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3", "HCMB", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S10_1 as VVTS_APP"
+text = "165\r\nSFC"
+position = ["N011.12.01.575", "E106.01.11.957"]
+size = 20
+controller_me = "TSTE"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3", "HCMB", "VVHM", "VCL"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S11 as VVHM_7_CTR"
+text = "195\r\nSFC"
+position = ["N010.09.15.047", "E107.21.35.835"]
+size = 30
+controller_me = "VHS7"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S11 as VVHM_3_CTR"
+text = "195\r\nSFC"
+position = ["N010.09.15.047", "E107.21.35.835"]
+size = 30
+controller_me = "VHS3"
+controller_others = []
+controller_not_others = ["VHS7"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S11 as VVHM_B_CTR"
+text = "195\r\nSFC"
+position = ["N010.09.15.047", "E107.21.35.835"]
+size = 30
+controller_me = "HCMB"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S11 as VVHM_CTR"
+text = "195\r\nSFC"
+position = ["N010.09.15.047", "E107.21.35.835"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3", "HCMB"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S11 as VCL_CTR"
+text = "195\r\nSFC"
+position = ["N010.09.15.047", "E107.21.35.835"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3", "HCMB", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S11 as VVTS_APP"
+text = "195\r\nSFC"
+position = ["N010.09.15.047", "E107.21.35.835"]
+size = 20
+controller_me = "TSTE"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3", "HCMB", "VVHM", "VCL"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S2 as VVHM_2_CTR"
+text = "195\r\nSFC"
+position = ["N011.32.50.844", "E106.28.30.887"]
+size = 30
+controller_me = "VHS2"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S2 as VVHM_A_CTR"
+text = "195\r\nSFC"
+position = ["N011.32.50.844", "E106.28.30.887"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS2"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S2 as VVHM_CTR"
+text = "195\r\nSFC"
+position = ["N011.32.50.844", "E106.28.30.887"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS2", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S2 as VCL_CTR"
+text = "195\r\nSFC"
+position = ["N011.32.50.844", "E106.28.30.887"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS2", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S2 as VVTS_APP"
+text = "195\r\nSFC"
+position = ["N011.32.50.844", "E106.28.30.887"]
+size = 20
+controller_me = "TSTE"
+controller_others = []
+controller_not_others = ["VHS2", "HCMA", "VVHM", "VCL"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S6 as VVHM_6_CTR"
+text = "195\r\nSFC"
+position = ["N011.01.05.002", "E107.24.28.240"]
+size = 30
+controller_me = "VHS6"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S6 as VVHM_2_CTR"
+text = "195\r\nSFC"
+position = ["N011.01.05.002", "E107.24.28.240"]
+size = 30
+controller_me = "VHS2"
+controller_others = []
+controller_not_others = ["VHS6"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S6 as VVHM_A_CTR"
+text = "195\r\nSFC"
+position = ["N011.01.05.002", "E107.24.28.240"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS6", "VHS2"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S6 as VVHM_CTR"
+text = "195\r\nSFC"
+position = ["N011.01.05.002", "E107.24.28.240"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS6", "VHS2", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S6 as VCL_CTR"
+text = "195\r\nSFC"
+position = ["N011.01.05.002", "E107.24.28.240"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS6", "VHS2", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S6 as VVTS_APP"
+text = "195\r\nSFC"
+position = ["N011.01.05.002", "E107.24.28.240"]
+size = 20
+controller_me = "TSTE"
+controller_others = []
+controller_not_others = ["VHS6", "VHS2", "HCMA", "VVHM", "VCL"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S8 as VVHM_6_CTR"
+text = "195\r\nSFC"
+position = ["N010.42.53.350", "E107.40.31.383"]
+size = 30
+controller_me = "VHS6"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S8 as VVHM_2_CTR"
+text = "195\r\nSFC"
+position = ["N010.42.53.350", "E107.40.31.383"]
+size = 30
+controller_me = "VHS2"
+controller_others = []
+controller_not_others = ["VHS6"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S8 as VVHM_A_CTR"
+text = "195\r\nSFC"
+position = ["N010.42.53.350", "E107.40.31.383"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS6", "VHS2"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S8 as VVHM_CTR"
+text = "195\r\nSFC"
+position = ["N010.42.53.350", "E107.40.31.383"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS6", "VHS2", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S8 as VCL_CTR"
+text = "195\r\nSFC"
+position = ["N010.42.53.350", "E107.40.31.383"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS6", "VHS2", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_EXT_APP_S8 as VVTS_APP"
+text = "195\r\nSFC"
+position = ["N010.42.53.350", "E107.40.31.383"]
+size = 20
+controller_me = "TSTE"
+controller_others = []
+controller_not_others = ["VHS6", "VHS2", "HCMA", "VVHM", "VCL"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_L_APP_25_1 as VVTS_APP"
+text = "095\r\nSFC"
+position = ["N010.47.57.054", "E106.30.07.907"]
+size = 20
+controller_me = "TSTE"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_L_APP_25_2 as VVTS_APP"
+text = "095\r\n055"
+position = ["N010.49.35.782", "E106.43.07.873"]
+size = 20
+controller_me = "TSTE"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_L_APP_25_3 as VVTS_APP"
+text = "055\r\n025"
+position = ["N010.49.27.089", "E106.39.09.426"]
+size = 20
+controller_me = "TSTE"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVTS_U_APP as VVTS_APP"
+text = "165\r\n125"
+position = ["N010.51.34.249", "E106.38.19.754"]
+size = 20
+controller_me = "TSTE"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VVNB_TMA as VVNB_APP"
+text = "155\r\n075"
+position = ["N021.09.51.748", "E105.53.57.501"]
+size = 20
+controller_me = "NBTE"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VVNB_TMA 11 L as VVNB_APP"
+text = "075\r\nSFC"
+position = ["N021.09.54.422", "E105.55.01.408"]
+size = 20
+controller_me = "NBTE"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VVNB_TMA 11 L3 as VVNB_APP"
+text = "075\r\n050"
+position = ["N020.55.29.892", "E106.28.41.072"]
+size = 20
+controller_me = "NBTE"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VVNB_TMA 29 L2 as VVNB_APP"
+text = "075\r\nSFC"
+position = ["N021.12.06.856", "E105.47.38.858"]
+size = 20
+controller_me = "NBTE"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDPF-1H_CTR as VDPF_CTR"
+text = "460\r\n150"
+position = ["N013.04.10.668", "E105.33.34.564"]
+size = 30
+controller_me = "PP"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDPF-1H_CTR as VCL_CTR"
+text = "460\r\n150"
+position = ["N013.04.10.668", "E105.33.34.564"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["PP"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDPF-1L_CTR as VDPF_CTR"
+text = "150\r\nSFC"
+position = ["N013.17.14.910", "E104.45.21.485"]
+size = 30
+controller_me = "PP"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDPF-1L_CTR as VCL_CTR"
+text = "150\r\nSFC"
+position = ["N013.17.14.910", "E104.45.21.485"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["PP"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDPF-2H_CTR as VDPF_2_CTR"
+text = "460\r\n150"
+position = ["N011.18.27.166", "E104.50.15.989"]
+size = 30
+controller_me = "PP2"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDPF-2H_CTR as VDPF_CTR"
+text = "460\r\n150"
+position = ["N011.18.27.166", "E104.50.15.989"]
+size = 30
+controller_me = "PP"
+controller_others = []
+controller_not_others = ["PP2"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDPF-2H_CTR as VCL_CTR"
+text = "460\r\n150"
+position = ["N011.18.27.166", "E104.50.15.989"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["PP2", "PP"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDPF-2L_CTR as VDPF_2_CTR"
+text = "150\r\nSFC"
+position = ["N012.25.35.361", "E103.46.20.243"]
+size = 30
+controller_me = "PP2"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDPF-2L_CTR as VDPF_CTR"
+text = "150\r\nSFC"
+position = ["N012.25.35.361", "E103.46.20.243"]
+size = 30
+controller_me = "PP"
+controller_others = []
+controller_not_others = ["PP2"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDPF-2L_CTR as VCL_CTR"
+text = "150\r\nSFC"
+position = ["N012.25.35.361", "E103.46.20.243"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["PP2", "PP"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDPF-2L_CTR_L1 as VDPF_2_CTR"
+text = "150\r\nSFC"
+position = ["N010.35.43.408", "E104.28.41.418"]
+size = 30
+controller_me = "PP2"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDPF-2L_CTR_L1 as VDPF_CTR"
+text = "150\r\nSFC"
+position = ["N010.35.43.408", "E104.28.41.418"]
+size = 30
+controller_me = "PP"
+controller_others = []
+controller_not_others = ["PP2"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDPF-2L_CTR_L1 as VCL_CTR"
+text = "150\r\nSFC"
+position = ["N010.35.43.408", "E104.28.41.418"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["PP2", "PP"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDPF-2L_CTR_L2 as VDPF_2_CTR"
+text = "150\r\nSFC"
+position = ["N011.03.17.813", "E105.56.19.782"]
+size = 30
+controller_me = "PP2"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDPF-2L_CTR_L2 as VDPF_CTR"
+text = "150\r\nSFC"
+position = ["N011.03.17.813", "E105.56.19.782"]
+size = 30
+controller_me = "PP"
+controller_others = []
+controller_not_others = ["PP2"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDPF-2L_CTR_L2 as VCL_CTR"
+text = "150\r\nSFC"
+position = ["N011.03.17.813", "E105.56.19.782"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["PP2", "PP"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDPF-2L_CTR_L3 as VDPF_2_CTR"
+text = "150\r\n100"
+position = ["N013.00.31.210", "E103.51.39.739"]
+size = 30
+controller_me = "PP2"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDPF-2L_CTR_L3 as VDPF_CTR"
+text = "150\r\n100"
+position = ["N013.00.31.210", "E103.51.39.739"]
+size = 30
+controller_me = "PP"
+controller_others = []
+controller_not_others = ["PP2"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDPF-2L_CTR_L3 as VCL_CTR"
+text = "150\r\n100"
+position = ["N013.00.31.210", "E103.51.39.739"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["PP2", "PP"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDPF-VVHM_3 as VDPF_2_CTR"
+text = "460\r\nSFC"
+position = ["N010.14.01.119", "E102.53.52.003"]
+size = 30
+controller_me = "PP2"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDPF-VVHM_3 as VDPF_CTR"
+text = "460\r\nSFC"
+position = ["N010.14.01.119", "E102.53.52.003"]
+size = 30
+controller_me = "PP"
+controller_others = []
+controller_not_others = ["PP2"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDPF-VVHM_3 as VVHM_3_CTR"
+text = "460\r\nSFC"
+position = ["N010.14.01.119", "E102.53.52.003"]
+size = 30
+controller_me = "VHS3"
+controller_others = []
+controller_not_others = ["PP2", "PP"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDPF-VVHM_3 as VVHM_B_CTR"
+text = "460\r\nSFC"
+position = ["N010.14.01.119", "E102.53.52.003"]
+size = 30
+controller_me = "HCMB"
+controller_others = []
+controller_not_others = ["PP2", "PP", "VHS3"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDPF-VVHM_3 as VVHM_CTR"
+text = "460\r\nSFC"
+position = ["N010.14.01.119", "E102.53.52.003"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["PP2", "PP", "VHS3", "HCMB"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDPF-VVHM_3 as VCL_CTR"
+text = "460\r\nSFC"
+position = ["N010.14.01.119", "E102.53.52.003"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["PP2", "PP", "VHS3", "HCMB", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDPF-VVHM_3_L2 as VDPF_2_CTR"
+text = "150\r\nSFC"
+position = ["N011.28.23.773", "E102.55.37.372"]
+size = 30
+controller_me = "PP2"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDPF-VVHM_3_L2 as VDPF_CTR"
+text = "150\r\nSFC"
+position = ["N011.28.23.773", "E102.55.37.372"]
+size = 30
+controller_me = "PP"
+controller_others = []
+controller_not_others = ["PP2"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDPF-VVHM_3_L2 as VVHM_3_CTR"
+text = "150\r\nSFC"
+position = ["N011.28.23.773", "E102.55.37.372"]
+size = 30
+controller_me = "VHS3"
+controller_others = []
+controller_not_others = ["PP2", "PP"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDPF-VVHM_3_L2 as VVHM_B_CTR"
+text = "150\r\nSFC"
+position = ["N011.28.23.773", "E102.55.37.372"]
+size = 30
+controller_me = "HCMB"
+controller_others = []
+controller_not_others = ["PP2", "PP", "VHS3"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDPF-VVHM_3_L2 as VVHM_CTR"
+text = "150\r\nSFC"
+position = ["N011.28.23.773", "E102.55.37.372"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["PP2", "PP", "VHS3", "HCMB"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VDPP VDPF-VVHM_3_L2 as VCL_CTR"
+text = "150\r\nSFC"
+position = ["N011.28.23.773", "E102.55.37.372"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["PP2", "PP", "VHS3", "HCMB", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 1 as VLVT_1_CTR"
+text = "245\r\n195"
+position = ["N020.02.50.579", "E102.15.34.202"]
+size = 30
+controller_me = "VC1"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 1 as VLVT_CTR"
+text = "245\r\n195"
+position = ["N020.02.50.579", "E102.15.34.202"]
+size = 30
+controller_me = "VLVT"
+controller_others = []
+controller_not_others = ["VC1"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 1 as VCL_CTR"
+text = "245\r\n195"
+position = ["N020.02.50.579", "E102.15.34.202"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VC1", "VLVT"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 1_L1 as VLVT_1_CTR"
+text = "195\r\nSFC"
+position = ["N018.44.08.328", "E103.14.58.630"]
+size = 30
+controller_me = "VC1"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 1_L1 as VLVT_CTR"
+text = "195\r\nSFC"
+position = ["N018.44.08.328", "E103.14.58.630"]
+size = 30
+controller_me = "VLVT"
+controller_others = []
+controller_not_others = ["VC1"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 1_L1 as VCL_CTR"
+text = "195\r\nSFC"
+position = ["N018.44.08.328", "E103.14.58.630"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VC1", "VLVT"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 1_L2 as VLVT_1_CTR"
+text = "195\r\nSFC"
+position = ["N019.16.47.814", "E102.43.20.628"]
+size = 30
+controller_me = "VC1"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 1_L2 as VLVT_CTR"
+text = "195\r\nSFC"
+position = ["N019.16.47.814", "E102.43.20.628"]
+size = 30
+controller_me = "VLVT"
+controller_others = []
+controller_not_others = ["VC1"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 1_L2 as VCL_CTR"
+text = "195\r\nSFC"
+position = ["N019.16.47.814", "E102.43.20.628"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VC1", "VLVT"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 1_L3 as VLVT_1_CTR"
+text = "195\r\nSFC"
+position = ["N019.48.33.696", "E102.29.11.718"]
+size = 30
+controller_me = "VC1"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 1_L3 as VLVT_CTR"
+text = "195\r\nSFC"
+position = ["N019.48.33.696", "E102.29.11.718"]
+size = 30
+controller_me = "VLVT"
+controller_others = []
+controller_not_others = ["VC1"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 1_L3 as VCL_CTR"
+text = "195\r\nSFC"
+position = ["N019.48.33.696", "E102.29.11.718"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VC1", "VLVT"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 1_L4 as VLVT_1_CTR"
+text = "195\r\nSFC"
+position = ["N021.13.05.489", "E102.22.58.681"]
+size = 30
+controller_me = "VC1"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 1_L4 as VLVT_CTR"
+text = "195\r\nSFC"
+position = ["N021.13.05.489", "E102.22.58.681"]
+size = 30
+controller_me = "VLVT"
+controller_others = []
+controller_not_others = ["VC1"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 1_L4 as VCL_CTR"
+text = "195\r\nSFC"
+position = ["N021.13.05.489", "E102.22.58.681"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VC1", "VLVT"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 1_L5 as VLVT_1_CTR"
+text = "195\r\n060"
+position = ["N020.25.12.062", "E104.04.06.811"]
+size = 30
+controller_me = "VC1"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 1_L5 as VLVT_CTR"
+text = "195\r\n060"
+position = ["N020.25.12.062", "E104.04.06.811"]
+size = 30
+controller_me = "VLVT"
+controller_others = []
+controller_not_others = ["VC1"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 1_L5 as VCL_CTR"
+text = "195\r\n060"
+position = ["N020.25.12.062", "E104.04.06.811"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VC1", "VLVT"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 1_L6 as VLVT_1_CTR"
+text = "195\r\n050"
+position = ["N020.58.26.591", "E101.24.10.188"]
+size = 30
+controller_me = "VC1"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 1_L6 as VLVT_CTR"
+text = "195\r\n050"
+position = ["N020.58.26.591", "E101.24.10.188"]
+size = 30
+controller_me = "VLVT"
+controller_others = []
+controller_not_others = ["VC1"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 1_L6 as VCL_CTR"
+text = "195\r\n050"
+position = ["N020.58.26.591", "E101.24.10.188"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VC1", "VLVT"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 1_U as VLVT_1_CTR"
+text = "460\r\n245"
+position = ["N020.02.50.579", "E102.15.34.202"]
+size = 30
+controller_me = "VC1"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 1_U as VLVT_CTR"
+text = "460\r\n245"
+position = ["N020.02.50.579", "E102.15.34.202"]
+size = 30
+controller_me = "VLVT"
+controller_others = []
+controller_not_others = ["VC1"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 1_U as VCL_CTR"
+text = "460\r\n245"
+position = ["N020.02.50.579", "E102.15.34.202"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VC1", "VLVT"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 2 as VLVT_CTR"
+text = "245\r\n195"
+position = ["N016.04.49.212", "E105.46.10.365"]
+size = 30
+controller_me = "VLVT"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 2 as VCL_CTR"
+text = "245\r\n195"
+position = ["N016.04.49.212", "E105.46.10.365"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VLVT"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 2_L1 as VLVT_CTR"
+text = "195\r\nSFC"
+position = ["N016.05.41.303", "E105.16.29.777"]
+size = 30
+controller_me = "VLVT"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 2_L1 as VCL_CTR"
+text = "195\r\nSFC"
+position = ["N016.05.41.303", "E105.16.29.777"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VLVT"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 2_L2 as VLVT_CTR"
+text = "195\r\nSFC"
+position = ["N015.57.18.209", "E105.59.09.936"]
+size = 30
+controller_me = "VLVT"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 2_L2 as VCL_CTR"
+text = "195\r\nSFC"
+position = ["N015.57.18.209", "E105.59.09.936"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VLVT"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 2_L3 as VLVT_CTR"
+text = "195\r\nSFC"
+position = ["N014.40.35.559", "E107.09.15.590"]
+size = 30
+controller_me = "VLVT"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 2_L3 as VCL_CTR"
+text = "195\r\nSFC"
+position = ["N014.40.35.559", "E107.09.15.590"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VLVT"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 2_L4 as VLVT_CTR"
+text = "195\r\n060"
+position = ["N014.48.02.793", "E107.01.10.789"]
+size = 30
+controller_me = "VLVT"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 2_L4 as VCL_CTR"
+text = "195\r\n060"
+position = ["N014.48.02.793", "E107.01.10.789"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VLVT"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 2_U as VLVT_CTR"
+text = "460\r\n245"
+position = ["N016.04.49.212", "E105.46.10.365"]
+size = 30
+controller_me = "VLVT"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VLVT VLVT ACC 2_U as VCL_CTR"
+text = "460\r\n245"
+position = ["N016.04.49.212", "E105.46.10.365"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VLVT"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S1 as VVHM_1_CTR"
+text = "460\r\n245"
+position = ["N014.09.39.393", "E108.36.18.848"]
+size = 30
+controller_me = "VHS1"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S1 as VVHM_A_CTR"
+text = "460\r\n245"
+position = ["N014.09.39.393", "E108.36.18.848"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS1"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S1 as VVHM_CTR"
+text = "460\r\n245"
+position = ["N014.09.39.393", "E108.36.18.848"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS1", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S1 as VCL_CTR"
+text = "460\r\n245"
+position = ["N014.09.39.393", "E108.36.18.848"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS1", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S1_L1 as VVHM_1_CTR"
+text = "245\r\nSFC"
+position = ["N013.19.25.944", "E108.27.41.969"]
+size = 30
+controller_me = "VHS1"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S1_L1 as VVHM_A_CTR"
+text = "245\r\nSFC"
+position = ["N013.19.25.944", "E108.27.41.969"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS1"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S1_L1 as VVHM_CTR"
+text = "245\r\nSFC"
+position = ["N013.19.25.944", "E108.27.41.969"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS1", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S1_L1 as VCL_CTR"
+text = "245\r\nSFC"
+position = ["N013.19.25.944", "E108.27.41.969"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS1", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S1_L2 as VVHM_1_CTR"
+text = "245\r\n100"
+position = ["N013.27.38.424", "E109.01.05.507"]
+size = 30
+controller_me = "VHS1"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S1_L2 as VVHM_A_CTR"
+text = "245\r\n100"
+position = ["N013.27.38.424", "E109.01.05.507"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS1"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S1_L2 as VVHM_CTR"
+text = "245\r\n100"
+position = ["N013.27.38.424", "E109.01.05.507"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS1", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S1_L2 as VCL_CTR"
+text = "245\r\n100"
+position = ["N013.27.38.424", "E109.01.05.507"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS1", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S1_L3 as VVHM_1_CTR"
+text = "245\r\nSFC"
+position = ["N015.33.26.146", "E110.15.39.000"]
+size = 30
+controller_me = "VHS1"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S1_L3 as VVHM_A_CTR"
+text = "245\r\nSFC"
+position = ["N015.33.26.146", "E110.15.39.000"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS1"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S1_L3 as VVHM_CTR"
+text = "245\r\nSFC"
+position = ["N015.33.26.146", "E110.15.39.000"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS1", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S1_L3 as VCL_CTR"
+text = "245\r\nSFC"
+position = ["N015.33.26.146", "E110.15.39.000"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS1", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S9 as VVHM_1_CTR"
+text = "265\r\n245"
+position = ["N012.39.33.056", "E109.09.53.118"]
+size = 30
+controller_me = "VHS1"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S9 as VVHM_A_CTR"
+text = "265\r\n245"
+position = ["N012.39.33.056", "E109.09.53.118"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS1"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S9 as VVHM_CTR"
+text = "265\r\n245"
+position = ["N012.39.33.056", "E109.09.53.118"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS1", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S9 as VCL_CTR"
+text = "265\r\n245"
+position = ["N012.39.33.056", "E109.09.53.118"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS1", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S9_L1 as VVHM_1_CTR"
+text = "245\r\nSFC"
+position = ["N011.48.41.852", "E108.56.46.402"]
+size = 30
+controller_me = "VHS1"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S9_L1 as VVHM_A_CTR"
+text = "245\r\nSFC"
+position = ["N011.48.41.852", "E108.56.46.402"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS1"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S9_L1 as VVHM_CTR"
+text = "245\r\nSFC"
+position = ["N011.48.41.852", "E108.56.46.402"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS1", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S9_L1 as VCL_CTR"
+text = "245\r\nSFC"
+position = ["N011.48.41.852", "E108.56.46.402"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS1", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S9_L2 as VVHM_1_CTR"
+text = "245\r\nSFC"
+position = ["N012.56.10.306", "E109.13.18.760"]
+size = 30
+controller_me = "VHS1"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S9_L2 as VVHM_A_CTR"
+text = "245\r\nSFC"
+position = ["N012.56.10.306", "E109.13.18.760"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS1"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S9_L2 as VVHM_CTR"
+text = "245\r\nSFC"
+position = ["N012.56.10.306", "E109.13.18.760"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS1", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S9_L2 as VCL_CTR"
+text = "245\r\nSFC"
+position = ["N012.56.10.306", "E109.13.18.760"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS1", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S9_L3 as VVHM_1_CTR"
+text = "245\r\n155"
+position = ["N012.08.18.059", "E109.02.50.240"]
+size = 30
+controller_me = "VHS1"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S9_L3 as VVHM_A_CTR"
+text = "245\r\n155"
+position = ["N012.08.18.059", "E109.02.50.240"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS1"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S9_L3 as VVHM_CTR"
+text = "245\r\n155"
+position = ["N012.08.18.059", "E109.02.50.240"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS1", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S9_L3 as VCL_CTR"
+text = "245\r\n155"
+position = ["N012.08.18.059", "E109.02.50.240"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS1", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S9_L4 as VVHM_1_CTR"
+text = "245\r\n090"
+position = ["N013.02.30.783", "E109.16.17.518"]
+size = 30
+controller_me = "VHS1"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S9_L4 as VVHM_A_CTR"
+text = "245\r\n090"
+position = ["N013.02.30.783", "E109.16.17.518"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS1"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S9_L4 as VVHM_CTR"
+text = "245\r\n090"
+position = ["N013.02.30.783", "E109.16.17.518"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS1", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S9_L4 as VCL_CTR"
+text = "245\r\n090"
+position = ["N013.02.30.783", "E109.16.17.518"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS1", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S9_L5 as VVHM_1_CTR"
+text = "245\r\n100"
+position = ["N013.28.32.076", "E109.15.39.451"]
+size = 30
+controller_me = "VHS1"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S9_L5 as VVHM_A_CTR"
+text = "245\r\n100"
+position = ["N013.28.32.076", "E109.15.39.451"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS1"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S9_L5 as VVHM_CTR"
+text = "245\r\n100"
+position = ["N013.28.32.076", "E109.15.39.451"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS1", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_1_S9_L5 as VCL_CTR"
+text = "245\r\n100"
+position = ["N013.28.32.076", "E109.15.39.451"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS1", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_2_S2 as VVHM_2_CTR"
+text = "460\r\n195"
+position = ["N011.56.20.149", "E106.53.45.834"]
+size = 30
+controller_me = "VHS2"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_2_S2 as VVHM_A_CTR"
+text = "460\r\n195"
+position = ["N011.56.20.149", "E106.53.45.834"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS2"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_2_S2 as VVHM_CTR"
+text = "460\r\n195"
+position = ["N011.56.20.149", "E106.53.45.834"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS2", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_2_S2 as VCL_CTR"
+text = "460\r\n195"
+position = ["N011.56.20.149", "E106.53.45.834"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS2", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_2_S2_L1 as VVHM_2_CTR"
+text = "195\r\nSFC"
+position = ["N012.43.39.110", "E108.18.35.894"]
+size = 30
+controller_me = "VHS2"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_2_S2_L1 as VVHM_A_CTR"
+text = "195\r\nSFC"
+position = ["N012.43.39.110", "E108.18.35.894"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS2"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_2_S2_L1 as VVHM_CTR"
+text = "195\r\nSFC"
+position = ["N012.43.39.110", "E108.18.35.894"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS2", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_2_S2_L1 as VCL_CTR"
+text = "195\r\nSFC"
+position = ["N012.43.39.110", "E108.18.35.894"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS2", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_2_S2_L2 as VVHM_2_CTR"
+text = "195\r\nSFC"
+position = ["N012.24.29.963", "E107.36.24.441"]
+size = 30
+controller_me = "VHS2"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_2_S2_L2 as VVHM_A_CTR"
+text = "195\r\nSFC"
+position = ["N012.24.29.963", "E107.36.24.441"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS2"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_2_S2_L2 as VVHM_CTR"
+text = "195\r\nSFC"
+position = ["N012.24.29.963", "E107.36.24.441"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS2", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_2_S2_L2 as VCL_CTR"
+text = "195\r\nSFC"
+position = ["N012.24.29.963", "E107.36.24.441"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS2", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_2_S2_L3 as VVHM_2_CTR"
+text = "195\r\n090"
+position = ["N012.39.59.996", "E108.07.26.373"]
+size = 30
+controller_me = "VHS2"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_2_S2_L3 as VVHM_A_CTR"
+text = "195\r\n090"
+position = ["N012.39.59.996", "E108.07.26.373"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS2"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_2_S2_L3 as VVHM_CTR"
+text = "195\r\n090"
+position = ["N012.39.59.996", "E108.07.26.373"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS2", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_2_S2_L3 as VCL_CTR"
+text = "195\r\n090"
+position = ["N012.39.59.996", "E108.07.26.373"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS2", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_2_S7 as VVHM_2_CTR"
+text = "305\r\n155"
+position = ["N012.07.02.751", "E108.33.46.293"]
+size = 30
+controller_me = "VHS2"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_2_S7 as VVHM_A_CTR"
+text = "305\r\n155"
+position = ["N012.07.02.751", "E108.33.46.293"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS2"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_2_S7 as VVHM_CTR"
+text = "305\r\n155"
+position = ["N012.07.02.751", "E108.33.46.293"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS2", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_2_S7 as VCL_CTR"
+text = "305\r\n155"
+position = ["N012.07.02.751", "E108.33.46.293"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS2", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_2_S7_L1 as VVHM_2_CTR"
+text = "155\r\nSFC"
+position = ["N012.02.45.770", "E108.32.24.057"]
+size = 30
+controller_me = "VHS2"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_2_S7_L1 as VVHM_A_CTR"
+text = "155\r\nSFC"
+position = ["N012.02.45.770", "E108.32.24.057"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS2"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_2_S7_L1 as VVHM_CTR"
+text = "155\r\nSFC"
+position = ["N012.02.45.770", "E108.32.24.057"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS2", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_2_S7_L1 as VCL_CTR"
+text = "155\r\nSFC"
+position = ["N012.02.45.770", "E108.32.24.057"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS2", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_2_S7_L2 as VVHM_2_CTR"
+text = "155\r\n110"
+position = ["N011.57.12.267", "E108.30.35.373"]
+size = 30
+controller_me = "VHS2"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_2_S7_L2 as VVHM_A_CTR"
+text = "155\r\n110"
+position = ["N011.57.12.267", "E108.30.35.373"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS2"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_2_S7_L2 as VVHM_CTR"
+text = "155\r\n110"
+position = ["N011.57.12.267", "E108.30.35.373"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS2", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_2_S7_L2 as VCL_CTR"
+text = "155\r\n110"
+position = ["N011.57.12.267", "E108.30.35.373"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS2", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_3_S10 as VVHM_3_CTR"
+text = "460\r\n255"
+position = ["N010.35.24.157", "E105.59.05.259"]
+size = 30
+controller_me = "VHS3"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_3_S10 as VVHM_B_CTR"
+text = "460\r\n255"
+position = ["N010.35.24.157", "E105.59.05.259"]
+size = 30
+controller_me = "HCMB"
+controller_others = []
+controller_not_others = ["VHS3"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_3_S10 as VVHM_CTR"
+text = "460\r\n255"
+position = ["N010.35.24.157", "E105.59.05.259"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS3", "HCMB"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_3_S10 as VCL_CTR"
+text = "460\r\n255"
+position = ["N010.35.24.157", "E105.59.05.259"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS3", "HCMB", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_3_S3 as VVHM_3_CTR"
+text = "460\r\n245"
+position = ["N009.26.30.079", "E104.13.10.328"]
+size = 30
+controller_me = "VHS3"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_3_S3 as VVHM_B_CTR"
+text = "460\r\n245"
+position = ["N009.26.30.079", "E104.13.10.328"]
+size = 30
+controller_me = "HCMB"
+controller_others = []
+controller_not_others = ["VHS3"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_3_S3 as VVHM_CTR"
+text = "460\r\n245"
+position = ["N009.26.30.079", "E104.13.10.328"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS3", "HCMB"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_3_S3 as VCL_CTR"
+text = "460\r\n245"
+position = ["N009.26.30.079", "E104.13.10.328"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS3", "HCMB", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_3_S3_L1 as VVHM_3_CTR"
+text = "245\r\nSFC"
+position = ["N009.42.29.223", "E104.28.05.602"]
+size = 30
+controller_me = "VHS3"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_3_S3_L1 as VVHM_B_CTR"
+text = "245\r\nSFC"
+position = ["N009.42.29.223", "E104.28.05.602"]
+size = 30
+controller_me = "HCMB"
+controller_others = []
+controller_not_others = ["VHS3"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_3_S3_L1 as VVHM_CTR"
+text = "245\r\nSFC"
+position = ["N009.42.29.223", "E104.28.05.602"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS3", "HCMB"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_3_S3_L1 as VCL_CTR"
+text = "245\r\nSFC"
+position = ["N009.42.29.223", "E104.28.05.602"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS3", "HCMB", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_3_S3_L2 as VVHM_3_CTR"
+text = "245\r\n040"
+position = ["N009.59.26.082", "E104.57.29.026"]
+size = 30
+controller_me = "VHS3"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_3_S3_L2 as VVHM_B_CTR"
+text = "245\r\n040"
+position = ["N009.59.26.082", "E104.57.29.026"]
+size = 30
+controller_me = "HCMB"
+controller_others = []
+controller_not_others = ["VHS3"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_3_S3_L2 as VVHM_CTR"
+text = "245\r\n040"
+position = ["N009.59.26.082", "E104.57.29.026"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS3", "HCMB"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_3_S3_L2 as VCL_CTR"
+text = "245\r\n040"
+position = ["N009.59.26.082", "E104.57.29.026"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS3", "HCMB", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_3_S3_L3 as VVHM_3_CTR"
+text = "245\r\n085"
+position = ["N010.09.48.361", "E104.11.53.006"]
+size = 30
+controller_me = "VHS3"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_3_S3_L3 as VVHM_B_CTR"
+text = "245\r\n085"
+position = ["N010.09.48.361", "E104.11.53.006"]
+size = 30
+controller_me = "HCMB"
+controller_others = []
+controller_not_others = ["VHS3"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_3_S3_L3 as VVHM_CTR"
+text = "245\r\n085"
+position = ["N010.09.48.361", "E104.11.53.006"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS3", "HCMB"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_3_S3_L3 as VCL_CTR"
+text = "245\r\n085"
+position = ["N010.09.48.361", "E104.11.53.006"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS3", "HCMB", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_4_S11 as VVHM_4_CTR"
+text = "460\r\n255"
+position = ["N009.46.11.225", "E107.10.46.829"]
+size = 30
+controller_me = "VHS4"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_4_S11 as VVHM_B_CTR"
+text = "460\r\n255"
+position = ["N009.46.11.225", "E107.10.46.829"]
+size = 30
+controller_me = "HCMB"
+controller_others = []
+controller_not_others = ["VHS4"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_4_S11 as VVHM_CTR"
+text = "460\r\n255"
+position = ["N009.46.11.225", "E107.10.46.829"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS4", "HCMB"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_4_S11 as VCL_CTR"
+text = "460\r\n255"
+position = ["N009.46.11.225", "E107.10.46.829"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS4", "HCMB", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_4_S4 as VVHM_4_CTR"
+text = "460\r\nSFC"
+position = ["N008.28.35.929", "E107.54.21.429"]
+size = 30
+controller_me = "VHS4"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_4_S4 as VVHM_B_CTR"
+text = "460\r\nSFC"
+position = ["N008.28.35.929", "E107.54.21.429"]
+size = 30
+controller_me = "HCMB"
+controller_others = []
+controller_not_others = ["VHS4"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_4_S4 as VVHM_CTR"
+text = "460\r\nSFC"
+position = ["N008.28.35.929", "E107.54.21.429"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS4", "HCMB"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_4_S4 as VCL_CTR"
+text = "460\r\nSFC"
+position = ["N008.28.35.929", "E107.54.21.429"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS4", "HCMB", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_5_S5 as VVHM_5_CTR"
+text = "460\r\n245"
+position = ["N012.41.19.390", "E110.48.55.756"]
+size = 30
+controller_me = "VHS5"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_5_S5 as VVHM_A_CTR"
+text = "460\r\n245"
+position = ["N012.41.19.390", "E110.48.55.756"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS5"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_5_S5 as VVHM_CTR"
+text = "460\r\n245"
+position = ["N012.41.19.390", "E110.48.55.756"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS5", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_5_S5 as VCL_CTR"
+text = "460\r\n245"
+position = ["N012.41.19.390", "E110.48.55.756"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS5", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_5_S5_L1 as VVHM_5_CTR"
+text = "245\r\nSFC"
+position = ["N012.30.15.755", "E110.17.12.125"]
+size = 30
+controller_me = "VHS5"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_5_S5_L1 as VVHM_A_CTR"
+text = "245\r\nSFC"
+position = ["N012.30.15.755", "E110.17.12.125"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS5"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_5_S5_L1 as VVHM_CTR"
+text = "245\r\nSFC"
+position = ["N012.30.15.755", "E110.17.12.125"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS5", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_5_S5_L1 as VCL_CTR"
+text = "245\r\nSFC"
+position = ["N012.30.15.755", "E110.17.12.125"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS5", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_5_S5_L2 as VVHM_5_CTR"
+text = "245\r\n155"
+position = ["N012.02.06.039", "E109.42.44.813"]
+size = 30
+controller_me = "VHS5"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_5_S5_L2 as VVHM_A_CTR"
+text = "245\r\n155"
+position = ["N012.02.06.039", "E109.42.44.813"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS5"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_5_S5_L2 as VVHM_CTR"
+text = "245\r\n155"
+position = ["N012.02.06.039", "E109.42.44.813"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS5", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_5_S5_L2 as VCL_CTR"
+text = "245\r\n155"
+position = ["N012.02.06.039", "E109.42.44.813"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS5", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_5_S5_L3 as VVHM_5_CTR"
+text = "245\r\n090"
+position = ["N013.02.29.415", "E109.33.16.276"]
+size = 30
+controller_me = "VHS5"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_5_S5_L3 as VVHM_A_CTR"
+text = "245\r\n090"
+position = ["N013.02.29.415", "E109.33.16.276"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS5"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_5_S5_L3 as VVHM_CTR"
+text = "245\r\n090"
+position = ["N013.02.29.415", "E109.33.16.276"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS5", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_5_S5_L3 as VCL_CTR"
+text = "245\r\n090"
+position = ["N013.02.29.415", "E109.33.16.276"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS5", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_5_S7 as VVHM_5_CTR"
+text = "460\r\n305"
+position = ["N012.07.02.751", "E108.33.46.293"]
+size = 30
+controller_me = "VHS5"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_5_S7 as VVHM_A_CTR"
+text = "460\r\n305"
+position = ["N012.07.02.751", "E108.33.46.293"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS5"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_5_S7 as VVHM_CTR"
+text = "460\r\n305"
+position = ["N012.07.02.751", "E108.33.46.293"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS5", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_5_S7 as VCL_CTR"
+text = "460\r\n305"
+position = ["N012.07.02.751", "E108.33.46.293"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS5", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_5_S8 as VVHM_5_CTR"
+text = "460\r\n305"
+position = ["N011.23.01.025", "E108.13.51.467"]
+size = 30
+controller_me = "VHS5"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_5_S8 as VVHM_A_CTR"
+text = "460\r\n305"
+position = ["N011.23.01.025", "E108.13.51.467"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS5"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_5_S8 as VVHM_CTR"
+text = "460\r\n305"
+position = ["N011.23.01.025", "E108.13.51.467"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS5", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_5_S8 as VCL_CTR"
+text = "460\r\n305"
+position = ["N011.23.01.025", "E108.13.51.467"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS5", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_5_S9 as VVHM_5_CTR"
+text = "460\r\n265"
+position = ["N012.39.33.056", "E109.09.53.118"]
+size = 30
+controller_me = "VHS5"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_5_S9 as VVHM_A_CTR"
+text = "460\r\n265"
+position = ["N012.39.33.056", "E109.09.53.118"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS5"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_5_S9 as VVHM_CTR"
+text = "460\r\n265"
+position = ["N012.39.33.056", "E109.09.53.118"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS5", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_5_S9 as VCL_CTR"
+text = "460\r\n265"
+position = ["N012.39.33.056", "E109.09.53.118"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS5", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S6 as VVHM_6_CTR"
+text = "460\r\n195"
+position = ["N011.20.46.919", "E107.41.11.947"]
+size = 30
+controller_me = "VHS6"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S6 as VVHM_2_CTR"
+text = "460\r\n195"
+position = ["N011.20.46.919", "E107.41.11.947"]
+size = 30
+controller_me = "VHS2"
+controller_others = []
+controller_not_others = ["VHS6"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S6 as VVHM_A_CTR"
+text = "460\r\n195"
+position = ["N011.20.46.919", "E107.41.11.947"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS6", "VHS2"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S6 as VVHM_CTR"
+text = "460\r\n195"
+position = ["N011.20.46.919", "E107.41.11.947"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS6", "VHS2", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S6 as VCL_CTR"
+text = "460\r\n195"
+position = ["N011.20.46.919", "E107.41.11.947"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS6", "VHS2", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S6_L1 as VVHM_6_CTR"
+text = "195\r\nSFC"
+position = ["N011.45.40.458", "E108.04.32.721"]
+size = 30
+controller_me = "VHS6"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S6_L1 as VVHM_2_CTR"
+text = "195\r\nSFC"
+position = ["N011.45.40.458", "E108.04.32.721"]
+size = 30
+controller_me = "VHS2"
+controller_others = []
+controller_not_others = ["VHS6"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S6_L1 as VVHM_A_CTR"
+text = "195\r\nSFC"
+position = ["N011.45.40.458", "E108.04.32.721"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS6", "VHS2"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S6_L1 as VVHM_CTR"
+text = "195\r\nSFC"
+position = ["N011.45.40.458", "E108.04.32.721"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS6", "VHS2", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S6_L1 as VCL_CTR"
+text = "195\r\nSFC"
+position = ["N011.45.40.458", "E108.04.32.721"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS6", "VHS2", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S6_L2 as VVHM_6_CTR"
+text = "195\r\n110"
+position = ["N011.51.55.045", "E108.11.03.712"]
+size = 30
+controller_me = "VHS6"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S6_L2 as VVHM_2_CTR"
+text = "195\r\n110"
+position = ["N011.51.55.045", "E108.11.03.712"]
+size = 30
+controller_me = "VHS2"
+controller_others = []
+controller_not_others = ["VHS6"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S6_L2 as VVHM_A_CTR"
+text = "195\r\n110"
+position = ["N011.51.55.045", "E108.11.03.712"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS6", "VHS2"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S6_L2 as VVHM_CTR"
+text = "195\r\n110"
+position = ["N011.51.55.045", "E108.11.03.712"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS6", "VHS2", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S6_L2 as VCL_CTR"
+text = "195\r\n110"
+position = ["N011.51.55.045", "E108.11.03.712"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS6", "VHS2", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S8 as VVHM_6_CTR"
+text = "305\r\n195"
+position = ["N011.23.01.025", "E108.13.51.467"]
+size = 30
+controller_me = "VHS6"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S8 as VVHM_2_CTR"
+text = "305\r\n195"
+position = ["N011.23.01.025", "E108.13.51.467"]
+size = 30
+controller_me = "VHS2"
+controller_others = []
+controller_not_others = ["VHS6"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S8 as VVHM_A_CTR"
+text = "305\r\n195"
+position = ["N011.23.01.025", "E108.13.51.467"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS6", "VHS2"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S8 as VVHM_CTR"
+text = "305\r\n195"
+position = ["N011.23.01.025", "E108.13.51.467"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS6", "VHS2", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S8 as VCL_CTR"
+text = "305\r\n195"
+position = ["N011.23.01.025", "E108.13.51.467"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS6", "VHS2", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S8_L1 as VVHM_6_CTR"
+text = "195\r\nSFC"
+position = ["N011.25.43.566", "E108.20.26.423"]
+size = 30
+controller_me = "VHS6"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S8_L1 as VVHM_2_CTR"
+text = "195\r\nSFC"
+position = ["N011.25.43.566", "E108.20.26.423"]
+size = 30
+controller_me = "VHS2"
+controller_others = []
+controller_not_others = ["VHS6"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S8_L1 as VVHM_A_CTR"
+text = "195\r\nSFC"
+position = ["N011.25.43.566", "E108.20.26.423"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS6", "VHS2"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S8_L1 as VVHM_CTR"
+text = "195\r\nSFC"
+position = ["N011.25.43.566", "E108.20.26.423"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS6", "VHS2", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S8_L1 as VCL_CTR"
+text = "195\r\nSFC"
+position = ["N011.25.43.566", "E108.20.26.423"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS6", "VHS2", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S8_L2 as VVHM_6_CTR"
+text = "195\r\n110"
+position = ["N011.39.47.551", "E108.25.18.887"]
+size = 30
+controller_me = "VHS6"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S8_L2 as VVHM_2_CTR"
+text = "195\r\n110"
+position = ["N011.39.47.551", "E108.25.18.887"]
+size = 30
+controller_me = "VHS2"
+controller_others = []
+controller_not_others = ["VHS6"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S8_L2 as VVHM_A_CTR"
+text = "195\r\n110"
+position = ["N011.39.47.551", "E108.25.18.887"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS6", "VHS2"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S8_L2 as VVHM_CTR"
+text = "195\r\n110"
+position = ["N011.39.47.551", "E108.25.18.887"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS6", "VHS2", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S8_L2 as VCL_CTR"
+text = "195\r\n110"
+position = ["N011.39.47.551", "E108.25.18.887"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS6", "VHS2", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S8_L3 as VVHM_6_CTR"
+text = "110\r\nSFC"
+position = ["N012.01.19.695", "E108.21.51.911"]
+size = 30
+controller_me = "VHS6"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S8_L3 as VVHM_2_CTR"
+text = "110\r\nSFC"
+position = ["N012.01.19.695", "E108.21.51.911"]
+size = 30
+controller_me = "VHS2"
+controller_others = []
+controller_not_others = ["VHS6"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S8_L3 as VVHM_A_CTR"
+text = "110\r\nSFC"
+position = ["N012.01.19.695", "E108.21.51.911"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["VHS6", "VHS2"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S8_L3 as VVHM_CTR"
+text = "110\r\nSFC"
+position = ["N012.01.19.695", "E108.21.51.911"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS6", "VHS2", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_6_S8_L3 as VCL_CTR"
+text = "110\r\nSFC"
+position = ["N012.01.19.695", "E108.21.51.911"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS6", "VHS2", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S10 as VVHM_7_CTR"
+text = "255\r\n195"
+position = ["N010.35.24.157", "E105.59.05.259"]
+size = 30
+controller_me = "VHS7"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S10 as VVHM_3_CTR"
+text = "255\r\n195"
+position = ["N010.35.24.157", "E105.59.05.259"]
+size = 30
+controller_me = "VHS3"
+controller_others = []
+controller_not_others = ["VHS7"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S10 as VVHM_B_CTR"
+text = "255\r\n195"
+position = ["N010.35.24.157", "E105.59.05.259"]
+size = 30
+controller_me = "HCMB"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S10 as VVHM_CTR"
+text = "255\r\n195"
+position = ["N010.35.24.157", "E105.59.05.259"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3", "HCMB"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S10 as VCL_CTR"
+text = "255\r\n195"
+position = ["N010.35.24.157", "E105.59.05.259"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3", "HCMB", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S10_L1 as VVHM_7_CTR"
+text = "195\r\nSFC"
+position = ["N009.08.51.477", "E105.27.30.780"]
+size = 30
+controller_me = "VHS7"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S10_L1 as VVHM_3_CTR"
+text = "195\r\nSFC"
+position = ["N009.08.51.477", "E105.27.30.780"]
+size = 30
+controller_me = "VHS3"
+controller_others = []
+controller_not_others = ["VHS7"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S10_L1 as VVHM_B_CTR"
+text = "195\r\nSFC"
+position = ["N009.08.51.477", "E105.27.30.780"]
+size = 30
+controller_me = "HCMB"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S10_L1 as VVHM_CTR"
+text = "195\r\nSFC"
+position = ["N009.08.51.477", "E105.27.30.780"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3", "HCMB"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S10_L1 as VCL_CTR"
+text = "195\r\nSFC"
+position = ["N009.08.51.477", "E105.27.30.780"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3", "HCMB", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S10_L2 as VVHM_7_CTR"
+text = "195\r\nSFC"
+position = ["N009.54.16.983", "E105.22.21.584"]
+size = 30
+controller_me = "VHS7"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S10_L2 as VVHM_3_CTR"
+text = "195\r\nSFC"
+position = ["N009.54.16.983", "E105.22.21.584"]
+size = 30
+controller_me = "VHS3"
+controller_others = []
+controller_not_others = ["VHS7"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S10_L2 as VVHM_B_CTR"
+text = "195\r\nSFC"
+position = ["N009.54.16.983", "E105.22.21.584"]
+size = 30
+controller_me = "HCMB"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S10_L2 as VVHM_CTR"
+text = "195\r\nSFC"
+position = ["N009.54.16.983", "E105.22.21.584"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3", "HCMB"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S10_L2 as VCL_CTR"
+text = "195\r\nSFC"
+position = ["N009.54.16.983", "E105.22.21.584"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3", "HCMB", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S10_L3 as VVHM_7_CTR"
+text = "195\r\n050"
+position = ["N009.10.42.788", "E105.10.30.865"]
+size = 30
+controller_me = "VHS7"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S10_L3 as VVHM_3_CTR"
+text = "195\r\n050"
+position = ["N009.10.42.788", "E105.10.30.865"]
+size = 30
+controller_me = "VHS3"
+controller_others = []
+controller_not_others = ["VHS7"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S10_L3 as VVHM_B_CTR"
+text = "195\r\n050"
+position = ["N009.10.42.788", "E105.10.30.865"]
+size = 30
+controller_me = "HCMB"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S10_L3 as VVHM_CTR"
+text = "195\r\n050"
+position = ["N009.10.42.788", "E105.10.30.865"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3", "HCMB"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S10_L3 as VCL_CTR"
+text = "195\r\n050"
+position = ["N009.10.42.788", "E105.10.30.865"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3", "HCMB", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S10_L4 as VVHM_7_CTR"
+text = "195\r\n040"
+position = ["N009.56.14.147", "E105.15.12.527"]
+size = 30
+controller_me = "VHS7"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S10_L4 as VVHM_3_CTR"
+text = "195\r\n040"
+position = ["N009.56.14.147", "E105.15.12.527"]
+size = 30
+controller_me = "VHS3"
+controller_others = []
+controller_not_others = ["VHS7"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S10_L4 as VVHM_B_CTR"
+text = "195\r\n040"
+position = ["N009.56.14.147", "E105.15.12.527"]
+size = 30
+controller_me = "HCMB"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S10_L4 as VVHM_CTR"
+text = "195\r\n040"
+position = ["N009.56.14.147", "E105.15.12.527"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3", "HCMB"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S10_L4 as VCL_CTR"
+text = "195\r\n040"
+position = ["N009.56.14.147", "E105.15.12.527"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3", "HCMB", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S10_L5 as VVHM_7_CTR"
+text = "195\r\n070"
+position = ["N010.02.02.329", "E105.38.47.605"]
+size = 30
+controller_me = "VHS7"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S10_L5 as VVHM_3_CTR"
+text = "195\r\n070"
+position = ["N010.02.02.329", "E105.38.47.605"]
+size = 30
+controller_me = "VHS3"
+controller_others = []
+controller_not_others = ["VHS7"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S10_L5 as VVHM_B_CTR"
+text = "195\r\n070"
+position = ["N010.02.02.329", "E105.38.47.605"]
+size = 30
+controller_me = "HCMB"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S10_L5 as VVHM_CTR"
+text = "195\r\n070"
+position = ["N010.02.02.329", "E105.38.47.605"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3", "HCMB"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S10_L5 as VCL_CTR"
+text = "195\r\n070"
+position = ["N010.02.02.329", "E105.38.47.605"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3", "HCMB", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S11 as VVHM_7_CTR"
+text = "255\r\n195"
+position = ["N009.46.11.225", "E107.10.46.829"]
+size = 30
+controller_me = "VHS7"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S11 as VVHM_3_CTR"
+text = "255\r\n195"
+position = ["N009.46.11.225", "E107.10.46.829"]
+size = 30
+controller_me = "VHS3"
+controller_others = []
+controller_not_others = ["VHS7"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S11 as VVHM_B_CTR"
+text = "255\r\n195"
+position = ["N009.46.11.225", "E107.10.46.829"]
+size = 30
+controller_me = "HCMB"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S11 as VVHM_CTR"
+text = "255\r\n195"
+position = ["N009.46.11.225", "E107.10.46.829"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3", "HCMB"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S11 as VCL_CTR"
+text = "255\r\n195"
+position = ["N009.46.11.225", "E107.10.46.829"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3", "HCMB", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S11_L1 as VVHM_7_CTR"
+text = "195\r\nSFC"
+position = ["N008.39.59.675", "E106.43.06.364"]
+size = 30
+controller_me = "VHS7"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S11_L1 as VVHM_3_CTR"
+text = "195\r\nSFC"
+position = ["N008.39.59.675", "E106.43.06.364"]
+size = 30
+controller_me = "VHS3"
+controller_others = []
+controller_not_others = ["VHS7"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S11_L1 as VVHM_B_CTR"
+text = "195\r\nSFC"
+position = ["N008.39.59.675", "E106.43.06.364"]
+size = 30
+controller_me = "HCMB"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S11_L1 as VVHM_CTR"
+text = "195\r\nSFC"
+position = ["N008.39.59.675", "E106.43.06.364"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3", "HCMB"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S11_L1 as VCL_CTR"
+text = "195\r\nSFC"
+position = ["N008.39.59.675", "E106.43.06.364"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3", "HCMB", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S11_L2 as VVHM_7_CTR"
+text = "195\r\nSFC"
+position = ["N009.11.06.855", "E106.45.47.850"]
+size = 30
+controller_me = "VHS7"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S11_L2 as VVHM_3_CTR"
+text = "195\r\nSFC"
+position = ["N009.11.06.855", "E106.45.47.850"]
+size = 30
+controller_me = "VHS3"
+controller_others = []
+controller_not_others = ["VHS7"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S11_L2 as VVHM_B_CTR"
+text = "195\r\nSFC"
+position = ["N009.11.06.855", "E106.45.47.850"]
+size = 30
+controller_me = "HCMB"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S11_L2 as VVHM_CTR"
+text = "195\r\nSFC"
+position = ["N009.11.06.855", "E106.45.47.850"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3", "HCMB"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S11_L2 as VCL_CTR"
+text = "195\r\nSFC"
+position = ["N009.11.06.855", "E106.45.47.850"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3", "HCMB", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S11_L3 as VVHM_7_CTR"
+text = "195\r\n070"
+position = ["N008.44.02.957", "E106.37.45.200"]
+size = 30
+controller_me = "VHS7"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S11_L3 as VVHM_3_CTR"
+text = "195\r\n070"
+position = ["N008.44.02.957", "E106.37.45.200"]
+size = 30
+controller_me = "VHS3"
+controller_others = []
+controller_not_others = ["VHS7"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S11_L3 as VVHM_B_CTR"
+text = "195\r\n070"
+position = ["N008.44.02.957", "E106.37.45.200"]
+size = 30
+controller_me = "HCMB"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S11_L3 as VVHM_CTR"
+text = "195\r\n070"
+position = ["N008.44.02.957", "E106.37.45.200"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3", "HCMB"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS ACC_7_S11_L3 as VCL_CTR"
+text = "195\r\n070"
+position = ["N008.44.02.957", "E106.37.45.200"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS7", "VHS3", "HCMB", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS IGARI TRIANGLE as VVHM_3_CTR"
+text = "460\r\nSFC"
+position = ["N006.58.44.037", "E103.31.01.868"]
+size = 30
+controller_me = "VHS3"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS IGARI TRIANGLE as VVHM_B_CTR"
+text = "460\r\nSFC"
+position = ["N006.58.44.037", "E103.31.01.868"]
+size = 30
+controller_me = "HCMB"
+controller_others = []
+controller_not_others = ["VHS3"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS IGARI TRIANGLE as VVHM_CTR"
+text = "460\r\nSFC"
+position = ["N006.58.44.037", "E103.31.01.868"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["VHS3", "HCMB"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS IGARI TRIANGLE as VCL_CTR"
+text = "460\r\nSFC"
+position = ["N006.58.44.037", "E103.31.01.868"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["VHS3", "HCMB", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVHM-VVHN_DEL as VVHN_4_CTR"
+text = "460\r\n245"
+position = ["N016.03.18.135", "E107.46.08.553"]
+size = 30
+controller_me = "HN4"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVHM-VVHN_DEL as VVHN_CTR"
+text = "460\r\n245"
+position = ["N016.03.18.135", "E107.46.08.553"]
+size = 30
+controller_me = "VVHN"
+controller_others = []
+controller_not_others = ["HN4"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVHM-VVHN_DEL as VVHM_1_CTR"
+text = "460\r\n245"
+position = ["N016.03.18.135", "E107.46.08.553"]
+size = 30
+controller_me = "VHS1"
+controller_others = []
+controller_not_others = ["HN4", "VVHN"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVHM-VVHN_DEL as VVHM_A_CTR"
+text = "460\r\n245"
+position = ["N016.03.18.135", "E107.46.08.553"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["HN4", "VVHN", "VHS1"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVHM-VVHN_DEL as VVHM_CTR"
+text = "460\r\n245"
+position = ["N016.03.18.135", "E107.46.08.553"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["HN4", "VVHN", "VHS1", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVHM-VVHN_DEL as VCL_CTR"
+text = "460\r\n245"
+position = ["N016.03.18.135", "E107.46.08.553"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["HN4", "VVHN", "VHS1", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVHM-VVHN_DEL_L1 as VVHN_4_CTR"
+text = "245\r\nSFC"
+position = ["N016.03.52.841", "E110.06.54.333"]
+size = 30
+controller_me = "HN4"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVHM-VVHN_DEL_L1 as VVHN_CTR"
+text = "245\r\nSFC"
+position = ["N016.03.52.841", "E110.06.54.333"]
+size = 30
+controller_me = "VVHN"
+controller_others = []
+controller_not_others = ["HN4"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVHM-VVHN_DEL_L1 as VVHM_1_CTR"
+text = "245\r\nSFC"
+position = ["N016.03.52.841", "E110.06.54.333"]
+size = 30
+controller_me = "VHS1"
+controller_others = []
+controller_not_others = ["HN4", "VVHN"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVHM-VVHN_DEL_L1 as VVHM_A_CTR"
+text = "245\r\nSFC"
+position = ["N016.03.52.841", "E110.06.54.333"]
+size = 30
+controller_me = "HCMA"
+controller_others = []
+controller_not_others = ["HN4", "VVHN", "VHS1"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVHM-VVHN_DEL_L1 as VVHM_CTR"
+text = "245\r\nSFC"
+position = ["N016.03.52.841", "E110.06.54.333"]
+size = 30
+controller_me = "VVHM"
+controller_others = []
+controller_not_others = ["HN4", "VVHN", "VHS1", "HCMA"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVTS VVHM-VVHN_DEL_L1 as VCL_CTR"
+text = "245\r\nSFC"
+position = ["N016.03.52.841", "E110.06.54.333"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["HN4", "VVHN", "VHS1", "HCMA", "VVHM"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV1_CTR as VVHN_1_CTR"
+text = "245\r\n155"
+position = ["N022.12.27.440", "E105.10.58.198"]
+size = 30
+controller_me = "HN1"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV1_CTR as VVHN_CTR"
+text = "245\r\n155"
+position = ["N022.12.27.440", "E105.10.58.198"]
+size = 30
+controller_me = "VVHN"
+controller_others = []
+controller_not_others = ["HN1"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV1_CTR as VCL_CTR"
+text = "245\r\n155"
+position = ["N022.12.27.440", "E105.10.58.198"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["HN1", "VVHN"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV1_L1_CTR as VVHN_1_CTR"
+text = "155\r\n090"
+position = ["N020.51.17.134", "E106.36.54.874"]
+size = 30
+controller_me = "HN1"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV1_L1_CTR as VVHN_CTR"
+text = "155\r\n090"
+position = ["N020.51.17.134", "E106.36.54.874"]
+size = 30
+controller_me = "VVHN"
+controller_others = []
+controller_not_others = ["HN1"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV1_L1_CTR as VCL_CTR"
+text = "155\r\n090"
+position = ["N020.51.17.134", "E106.36.54.874"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["HN1", "VVHN"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV1_L2_CTR as VVHN_1_CTR"
+text = "155\r\nSFC"
+position = ["N021.47.54.589", "E105.28.06.662"]
+size = 30
+controller_me = "HN1"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV1_L2_CTR as VVHN_CTR"
+text = "155\r\nSFC"
+position = ["N021.47.54.589", "E105.28.06.662"]
+size = 30
+controller_me = "VVHN"
+controller_others = []
+controller_not_others = ["HN1"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV1_L2_CTR as VCL_CTR"
+text = "155\r\nSFC"
+position = ["N021.47.54.589", "E105.28.06.662"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["HN1", "VVHN"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV1_L3_CTR as VVHN_1_CTR"
+text = "155\r\n090"
+position = ["N021.23.27.429", "E103.08.31.420"]
+size = 30
+controller_me = "HN1"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV1_L3_CTR as VVHN_CTR"
+text = "155\r\n090"
+position = ["N021.23.27.429", "E103.08.31.420"]
+size = 30
+controller_me = "VVHN"
+controller_others = []
+controller_not_others = ["HN1"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV1_L3_CTR as VCL_CTR"
+text = "155\r\n090"
+position = ["N021.23.27.429", "E103.08.31.420"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["HN1", "VVHN"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV1_L4_CTR as VVHN_1_CTR"
+text = "155\r\n050"
+position = ["N021.00.29.976", "E106.42.26.671"]
+size = 30
+controller_me = "HN1"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV1_L4_CTR as VVHN_CTR"
+text = "155\r\n050"
+position = ["N021.00.29.976", "E106.42.26.671"]
+size = 30
+controller_me = "VVHN"
+controller_others = []
+controller_not_others = ["HN1"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV1_L4_CTR as VCL_CTR"
+text = "155\r\n050"
+position = ["N021.00.29.976", "E106.42.26.671"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["HN1", "VVHN"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV1_L5_CTR as VVHN_1_CTR"
+text = "155\r\n090"
+position = ["N021.10.32.150", "E107.21.50.956"]
+size = 30
+controller_me = "HN1"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV1_L5_CTR as VVHN_CTR"
+text = "155\r\n090"
+position = ["N021.10.32.150", "E107.21.50.956"]
+size = 30
+controller_me = "VVHN"
+controller_others = []
+controller_not_others = ["HN1"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV1_L5_CTR as VCL_CTR"
+text = "155\r\n090"
+position = ["N021.10.32.150", "E107.21.50.956"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["HN1", "VVHN"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV1_U as VVHN_1_CTR"
+text = "460\r\n245"
+position = ["N022.12.27.440", "E105.10.58.198"]
+size = 30
+controller_me = "HN1"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV1_U as VVHN_CTR"
+text = "460\r\n245"
+position = ["N022.12.27.440", "E105.10.58.198"]
+size = 30
+controller_me = "VVHN"
+controller_others = []
+controller_not_others = ["HN1"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV1_U as VCL_CTR"
+text = "460\r\n245"
+position = ["N022.12.27.440", "E105.10.58.198"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["HN1", "VVHN"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV2_CTR as VVHN_2_CTR"
+text = "245\r\n155"
+position = ["N020.12.30.603", "E106.14.15.074"]
+size = 30
+controller_me = "HN2"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV2_CTR as VVHN_CTR"
+text = "245\r\n155"
+position = ["N020.12.30.603", "E106.14.15.074"]
+size = 30
+controller_me = "VVHN"
+controller_others = []
+controller_not_others = ["HN2"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV2_CTR as VCL_CTR"
+text = "245\r\n155"
+position = ["N020.12.30.603", "E106.14.15.074"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["HN2", "VVHN"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV2_L1_CTR as VVHN_2_CTR"
+text = "155\r\nSFC"
+position = ["N019.51.25.871", "E105.09.46.340"]
+size = 30
+controller_me = "HN2"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV2_L1_CTR as VVHN_CTR"
+text = "155\r\nSFC"
+position = ["N019.51.25.871", "E105.09.46.340"]
+size = 30
+controller_me = "VVHN"
+controller_others = []
+controller_not_others = ["HN2"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV2_L1_CTR as VCL_CTR"
+text = "155\r\nSFC"
+position = ["N019.51.25.871", "E105.09.46.340"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["HN2", "VVHN"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV2_L2_CTR as VVHN_2_CTR"
+text = "155\r\nSFC"
+position = ["N020.23.51.780", "E106.36.04.588"]
+size = 30
+controller_me = "HN2"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV2_L2_CTR as VVHN_CTR"
+text = "155\r\nSFC"
+position = ["N020.23.51.780", "E106.36.04.588"]
+size = 30
+controller_me = "VVHN"
+controller_others = []
+controller_not_others = ["HN2"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV2_L2_CTR as VCL_CTR"
+text = "155\r\nSFC"
+position = ["N020.23.51.780", "E106.36.04.588"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["HN2", "VVHN"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV2_L3_CTR as VVHN_2_CTR"
+text = "155\r\n090"
+position = ["N020.35.08.748", "E106.39.56.822"]
+size = 30
+controller_me = "HN2"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV2_L3_CTR as VVHN_CTR"
+text = "155\r\n090"
+position = ["N020.35.08.748", "E106.39.56.822"]
+size = 30
+controller_me = "VVHN"
+controller_others = []
+controller_not_others = ["HN2"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV2_L3_CTR as VCL_CTR"
+text = "155\r\n090"
+position = ["N020.35.08.748", "E106.39.56.822"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["HN2", "VVHN"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV2_L4_CTR as VVHN_2_CTR"
+text = "155\r\n090"
+position = ["N020.53.54.926", "E107.26.08.282"]
+size = 30
+controller_me = "HN2"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV2_L4_CTR as VVHN_CTR"
+text = "155\r\n090"
+position = ["N020.53.54.926", "E107.26.08.282"]
+size = 30
+controller_me = "VVHN"
+controller_others = []
+controller_not_others = ["HN2"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV2_L4_CTR as VCL_CTR"
+text = "155\r\n090"
+position = ["N020.53.54.926", "E107.26.08.282"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["HN2", "VVHN"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV2_L5_CTR as VVHN_2_CTR"
+text = "155\r\n090"
+position = ["N019.54.09.447", "E105.28.13.379"]
+size = 30
+controller_me = "HN2"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV2_L5_CTR as VVHN_CTR"
+text = "155\r\n090"
+position = ["N019.54.09.447", "E105.28.13.379"]
+size = 30
+controller_me = "VVHN"
+controller_others = []
+controller_not_others = ["HN2"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV2_L5_CTR as VCL_CTR"
+text = "155\r\n090"
+position = ["N019.54.09.447", "E105.28.13.379"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["HN2", "VVHN"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV2_U as VVHN_2_CTR"
+text = "460\r\n245"
+position = ["N020.12.30.603", "E106.14.15.074"]
+size = 30
+controller_me = "HN2"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV2_U as VVHN_CTR"
+text = "460\r\n245"
+position = ["N020.12.30.603", "E106.14.15.074"]
+size = 30
+controller_me = "VVHN"
+controller_others = []
+controller_not_others = ["HN2"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV2_U as VCL_CTR"
+text = "460\r\n245"
+position = ["N020.12.30.603", "E106.14.15.074"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["HN2", "VVHN"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV3_CTR as VVHN_3_CTR"
+text = "245\r\n100"
+position = ["N018.15.33.273", "E106.08.31.699"]
+size = 30
+controller_me = "HN3"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV3_CTR as VVHN_CTR"
+text = "245\r\n100"
+position = ["N018.15.33.273", "E106.08.31.699"]
+size = 30
+controller_me = "VVHN"
+controller_others = []
+controller_not_others = ["HN3"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV3_CTR as VCL_CTR"
+text = "245\r\n100"
+position = ["N018.15.33.273", "E106.08.31.699"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["HN3", "VVHN"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV3_L1_CTR as VVHN_3_CTR"
+text = "100\r\nSFC"
+position = ["N018.05.50.376", "E106.28.11.500"]
+size = 30
+controller_me = "HN3"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV3_L1_CTR as VVHN_CTR"
+text = "100\r\nSFC"
+position = ["N018.05.50.376", "E106.28.11.500"]
+size = 30
+controller_me = "VVHN"
+controller_others = []
+controller_not_others = ["HN3"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV3_L1_CTR as VCL_CTR"
+text = "100\r\nSFC"
+position = ["N018.05.50.376", "E106.28.11.500"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["HN3", "VVHN"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV3_L2_CTR as VVHN_3_CTR"
+text = "100\r\nSFC"
+position = ["N018.49.45.513", "E105.14.26.502"]
+size = 30
+controller_me = "HN3"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV3_L2_CTR as VVHN_CTR"
+text = "100\r\nSFC"
+position = ["N018.49.45.513", "E105.14.26.502"]
+size = 30
+controller_me = "VVHN"
+controller_others = []
+controller_not_others = ["HN3"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV3_L2_CTR as VCL_CTR"
+text = "100\r\nSFC"
+position = ["N018.49.45.513", "E105.14.26.502"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["HN3", "VVHN"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV3_L3_CTR as VVHN_3_CTR"
+text = "100\r\n090"
+position = ["N017.36.08.431", "E106.40.12.599"]
+size = 30
+controller_me = "HN3"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV3_L3_CTR as VVHN_CTR"
+text = "100\r\n090"
+position = ["N017.36.08.431", "E106.40.12.599"]
+size = 30
+controller_me = "VVHN"
+controller_others = []
+controller_not_others = ["HN3"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV3_L3_CTR as VCL_CTR"
+text = "100\r\n090"
+position = ["N017.36.08.431", "E106.40.12.599"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["HN3", "VVHN"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV3_U as VVHN_3_CTR"
+text = "460\r\n245"
+position = ["N018.15.33.273", "E106.08.31.699"]
+size = 30
+controller_me = "HN3"
+controller_others = []
+controller_not_others = []
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV3_U as VVHN_CTR"
+text = "460\r\n245"
+position = ["N018.15.33.273", "E106.08.31.699"]
+size = 30
+controller_me = "VVHN"
+controller_others = []
+controller_not_others = ["HN3"]
+default = true
+
+[[sector_vertical_limit]]
+#comment = "VVVV VV3_U as VCL_CTR"
+text = "460\r\n245"
+position = ["N018.15.33.273", "E106.08.31.699"]
+size = 30
+controller_me = "VCL"
+controller_others = []
+controller_not_others = ["HN3", "VVHN"]
+default = true

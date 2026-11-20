@@ -1,0 +1,90 @@
+name: CoVCL Build
+
+on:
+  push:
+  workflow_dispatch:
+
+env:
+  BUILD_TYPE: Release
+
+jobs:
+  build:
+    # windows-2022 has Visual Studio 2022 with the v143 toolset and MFC, which CoVCL.vcxproj targets.
+    # windows-latest is Windows Server 2025 with Visual Studio 2026: it has the v143 compiler but not v143 MFC.
+    runs-on: windows-2022
+    permissions:
+      contents: write
+    env:
+      # vcpkg keeps its compiled packages here; the folder is cached between runs (OpenSSL/curl take ~15 min to build).
+      VCPKG_DEFAULT_BINARY_CACHE: ${{ github.workspace }}\.vcpkg-cache
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set Command Prompt for Microsoft
+        uses: TheMrMilchmann/setup-msvc-dev@v3
+        with:
+          arch: x86
+
+      - name: Get version
+        id: get_version
+        shell: bash
+        run: |
+          version="${GITHUB_SHA::7}"
+          if [ "${{ github.ref_type }}" == "tag" ]; then
+            version=$(echo "${{ github.ref }}" | sed -E 's/refs\/tags\/(v)?//g')
+          fi
+          echo "version=$version" >> $GITHUB_OUTPUT
+
+      - name: Restore vcpkg binary cache
+        id: vcpkg-cache
+        uses: actions/cache/restore@v4
+        with:
+          path: ${{ env.VCPKG_DEFAULT_BINARY_CACHE }}
+          key: vcpkg-${{ runner.os }}-x86-windows-static-${{ hashFiles('vcpkg.json') }}
+          restore-keys: vcpkg-${{ runner.os }}-x86-windows-static-
+
+      - name: Install vcpkg dependencies
+        run: |
+          New-Item -ItemType Directory -Force -Path $env:VCPKG_DEFAULT_BINARY_CACHE | Out-Null
+          vcpkg install --triplet=x86-windows-static
+          vcpkg integrate install
+
+      # Saved right after the install (not at job end) so a later compile error does not throw the packages away.
+      - name: Save vcpkg binary cache
+        if: always() && steps.vcpkg-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: ${{ env.VCPKG_DEFAULT_BINARY_CACHE }}
+          key: vcpkg-${{ runner.os }}-x86-windows-static-${{ hashFiles('vcpkg.json') }}
+
+      - name: Set version in header and resource files
+        run: |
+          (Get-Content CoVCLPlugIn.h).replace('@appveyor_build', '${{ steps.get_version.outputs.version }}') | Set-Content CoVCLPlugIn.h
+          (Get-Content CoVCL.rc).replace('@appveyor_build', '${{ steps.get_version.outputs.version }}') | Set-Content CoVCL.rc
+
+      - name: Build DLL
+        run: msbuild "CoVCL.sln" /p:VcpkgEnableManifest=true /p:Platform=x86 /p:Configuration=Release
+
+      - name: Package config next to the DLL
+        shell: bash
+        run: cp config.toml Release/CoVCL.toml
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: CoVCL
+          path: |
+            Release/CoVCL.dll
+            Release/CoVCL.toml
+
+      - name: Create release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          name: CoVCL version ${{ steps.get_version.outputs.version }}
+          prerelease: false
+          draft: true
+          files: |
+              Release/CoVCL.dll
+              Release/CoVCL.toml

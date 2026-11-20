@@ -1,0 +1,75 @@
+name: CoVCL Debug
+
+on:
+  workflow_dispatch:
+
+env:
+  BUILD_TYPE: Debug
+
+jobs:
+  build:
+    # Same runner as the release build: Visual Studio 2022 with the v143 toolset and MFC.
+    runs-on: windows-2022
+    permissions:
+      contents: write
+    env:
+      VCPKG_DEFAULT_BINARY_CACHE: ${{ github.workspace }}\.vcpkg-cache
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set Command Prompt for Microsoft
+        uses: TheMrMilchmann/setup-msvc-dev@v3
+        with:
+          arch: x86
+
+      - name: Get version
+        id: get_version
+        shell: bash
+        run: |
+          version="${GITHUB_SHA::7}"
+          if [ "${{ github.ref_type }}" == "tag" ]; then
+            version=$(echo "${{ github.ref }}" | sed -E 's/refs\/tags\/(v)?//g')
+          fi
+          echo "version=$version" >> $GITHUB_OUTPUT
+
+      - name: Restore vcpkg binary cache
+        id: vcpkg-cache
+        uses: actions/cache/restore@v4
+        with:
+          path: ${{ env.VCPKG_DEFAULT_BINARY_CACHE }}
+          key: vcpkg-${{ runner.os }}-x86-windows-static-${{ hashFiles('vcpkg.json') }}
+          restore-keys: vcpkg-${{ runner.os }}-x86-windows-static-
+
+      - name: Install vcpkg dependencies
+        run: |
+          New-Item -ItemType Directory -Force -Path $env:VCPKG_DEFAULT_BINARY_CACHE | Out-Null
+          vcpkg install --triplet=x86-windows-static
+          vcpkg integrate install
+
+      - name: Save vcpkg binary cache
+        if: always() && steps.vcpkg-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: ${{ env.VCPKG_DEFAULT_BINARY_CACHE }}
+          key: vcpkg-${{ runner.os }}-x86-windows-static-${{ hashFiles('vcpkg.json') }}
+
+      - name: Set version in header and resource files
+        run: |
+          (Get-Content CoVCLPlugIn.h).replace('@appveyor_build', '${{ steps.get_version.outputs.version }}') | Set-Content CoVCLPlugIn.h
+          (Get-Content CoVCL.rc).replace('@appveyor_build', '${{ steps.get_version.outputs.version }}') | Set-Content CoVCL.rc
+
+      - name: Build DLL
+        run: msbuild "CoVCL.sln" /p:VcpkgEnableManifest=true /p:Platform=x86 /p:Configuration=Debug
+
+      - name: Upload DLL artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: CoVCL.dll
+          path: Debug/CoVCL.dll
+
+      - name: Upload debug symbols artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: CoVCL.pdb
+          path: Debug/CoVCL.pdb

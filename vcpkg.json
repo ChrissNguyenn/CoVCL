@@ -1,0 +1,19 @@
+{
+    "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg/master/scripts/vcpkg.schema.json",
+    "name": "covcl",
+    "version": "1.5.1",
+    "dependencies": [
+        "openssl",
+        "curl",
+        "nlohmann-json",
+        "cpp-httplib",
+        "toml11"
+    ],
+   "builtin-baseline": "7220a4eebf20515cdd9c34721e15ca082bae9038",
+    "overrides": [
+        {
+            "name": "cpp-httplib",
+            "version": "0.18.3"
+        }
+    ]
+  }
